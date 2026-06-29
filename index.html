@@ -73,12 +73,6 @@
     <source src="img/hero-intro.mp4" type="video/mp4">
   </video>
   <button data-intro-skip="1" type="button" style="position:absolute;right:clamp(18px,4vw,44px);bottom:clamp(18px,4vw,44px);z-index:2;padding:10px 22px;border:1px solid rgba(255,255,255,.45);border-radius:100px;color:#fff;font-size:12px;letter-spacing:.18em;background:rgba(0,0,0,.18);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:background .25s,border-color .25s" style-hover="background:rgba(0,0,0,.4);border-color:#fff">SKIP ▸</button>
-  <div data-intro-play="1" hidden style="position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;cursor:pointer;background:rgba(12,15,8,.34)">
-    <span aria-hidden="true" style="display:flex;align-items:center;justify-content:center;width:84px;height:84px;border:1.5px solid rgba(255,255,255,.85);border-radius:50%;color:#fff">
-      <span style="display:block;width:0;height:0;border-style:solid;border-width:13px 0 13px 22px;border-color:transparent transparent transparent #fff;margin-left:5px"></span>
-    </span>
-    <span style="color:#fff;font-size:13px;letter-spacing:.24em;text-transform:uppercase">タップして再生</span>
-  </div>
 </div>
 
 <header data-nav="1" role="banner" style="color:var(--ink);position:fixed;top:0;left:0;right:0;z-index:120;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px clamp(18px,4vw,56px);background:var(--glass);backdrop-filter:blur(22px) saturate(1.4);-webkit-backdrop-filter:blur(22px) saturate(1.4);border-bottom:1px solid var(--line-2);transition:background .4s ease,box-shadow .4s ease">
@@ -569,24 +563,22 @@ class Component extends DCLogic {
       const tryPlay = () => {
         const p = video.play && video.play();
         if (p && p.catch) p.catch(() => {
-          // Autoplay blocked (common on iPad/tablet Safari & Low Power Mode):
-          // don't silently skip — show a tap-to-play prompt and start on tap.
-          const prompt = document.querySelector('[data-intro-play]');
-          if (prompt) prompt.hidden = false;
-          const startOnTap = () => {
-            if (prompt) prompt.hidden = true;
+          // Autoplay blocked: retry once on the first user interaction,
+          // otherwise skip straight to the site instead of a frozen frame.
+          const retry = () => {
             const p2 = video.play && video.play();
             if (p2 && p2.catch) p2.catch(() => end());
           };
-          if (prompt) prompt.addEventListener('click', startOnTap, { once: true });
-          overlay.addEventListener('click', startOnTap, { once: true });
-          window.addEventListener('keydown', startOnTap, { once: true });
+          window.addEventListener('pointerdown', retry, { once: true });
+          window.addEventListener('keydown', retry, { once: true });
+          window.addEventListener('touchstart', retry, { once: true });
+          this._introFallback = setTimeout(end, 1500);
         });
       };
       tryPlay();
     }
-    if (skip) skip.addEventListener('click', (e) => { e.stopPropagation(); end(); });
-    this._introTimer = setTimeout(end, 30000);
+    if (skip) skip.addEventListener('click', end);
+    this._introTimer = setTimeout(end, 15000);
   }
 
   _endIntro(instant) {
