@@ -553,17 +553,32 @@ class Component extends DCLogic {
     if (video) {
       video.addEventListener('ended', end, { once: true });
       video.addEventListener('error', end, { once: true });
-      const p = video.play && video.play();
-      if (p && p.catch) p.catch(() => {});
+      const tryPlay = () => {
+        const p = video.play && video.play();
+        if (p && p.catch) p.catch(() => {
+          // Autoplay blocked: retry once on the first user interaction,
+          // otherwise skip straight to the site instead of a frozen frame.
+          const retry = () => {
+            const p2 = video.play && video.play();
+            if (p2 && p2.catch) p2.catch(() => end());
+          };
+          window.addEventListener('pointerdown', retry, { once: true });
+          window.addEventListener('keydown', retry, { once: true });
+          window.addEventListener('touchstart', retry, { once: true });
+          this._introFallback = setTimeout(end, 1500);
+        });
+      };
+      tryPlay();
     }
     if (skip) skip.addEventListener('click', end);
-    this._introTimer = setTimeout(end, 30000);
+    this._introTimer = setTimeout(end, 15000);
   }
 
   _endIntro(instant) {
     if (this._introEnded) return;
     this._introEnded = true;
     clearTimeout(this._introTimer);
+    clearTimeout(this._introFallback);
     const overlay = document.querySelector('[data-intro]');
     const hero = document.querySelector('#top');
     document.body.style.overflow = this._prevOverflow || '';
