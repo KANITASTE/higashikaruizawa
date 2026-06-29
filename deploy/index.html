@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="東軽井沢市 — 静けさを、未来へ。山に抱かれ、素材で世界とつながる山あいの研究都市。暮らす・働く・遊ぶ、そのすべてに余白がある街の公式ポータル。">
+<meta property="og:title" content="東軽井沢市 ── 静けさを、未来へ。">
+<meta property="og:description" content="山あいの盆地に、世界水準の頭脳と、歩いて暮らせる静けさが同居する街。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&family=Zen+Old+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"GovernmentOrganization","name":"東軽井沢市","alternateName":"Higashi-Karuizawa City","slogan":"静けさを、未来へ。","description":"山に抱かれ、素材で世界とつながる山あいの研究都市。"}</script>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  :root{
+    --bg:#F3F1EB; --bg-2:#ECE9E1; --surface:#FBFAF6;
+    --ink:#1B1E1A; --ink-2:#4A4E45; --muted:#7C8076;
+    --line:rgba(27,30,26,.12); --line-2:rgba(27,30,26,.07);
+    --green:#3E5C49; --green-soft:#5C7A66;
+    --accent:#3E5C49;
+    --glass:rgba(243,241,235,.72); --glass-strong:rgba(243,241,235,.9); --glass-line:rgba(255,255,255,.55);
+    --sky-1:#ECE6DB; --sky-2:#E7ECE6; --sky-3:#D7E2DB;
+    --ridge-back:#BBC8BE; --ridge-mid:#8AA191; --ridge-front:#3F5848;
+    --mist:rgba(247,244,238,.66);
+    --card:rgba(251,250,246,.7);
+    --shadow:0 30px 70px -45px rgba(27,30,26,.5);
+  }
+  [data-theme="dark"]{
+    --bg:#101309; --bg-2:#14180F; --surface:#181C12;
+    --ink:#ECEAE0; --ink-2:#BFC2B6; --muted:#878B7E;
+    --line:rgba(236,234,224,.14); --line-2:rgba(236,234,224,.07);
+    --green:#9CC4A8; --green-soft:#7FA98B;
+    --accent:#9CC4A8;
+    --glass:rgba(16,19,9,.66); --glass-strong:rgba(16,19,9,.88); --glass-line:rgba(255,255,255,.07);
+    --sky-1:#0C0F08; --sky-2:#10140C; --sky-3:#0A0D07;
+    --ridge-back:#1C271F; --ridge-mid:#141E16; --ridge-front:#0C140E;
+    --mist:rgba(18,26,20,.5);
+    --card:rgba(24,28,18,.6);
+    --shadow:0 30px 80px -45px rgba(0,0,0,.85);
+  }
+  [data-accent="fuji"]{--accent:#6E6796}
+  [data-theme="dark"][data-accent="fuji"]{--accent:#B6B0DC}
+  [data-accent="stone"]{--accent:#6B6F66}
+  [data-theme="dark"][data-accent="stone"]{--accent:#AEB1A6}
+  body{background:var(--bg);color:var(--ink);font-family:"Zen Kaku Gothic New",sans-serif;font-weight:400;line-height:1.85;-webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background .6s ease,color .6s ease}
+  a{color:inherit;text-decoration:none}
+  button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+  ::selection{background:var(--accent);color:var(--bg)}
+  img{max-width:100%;display:block}
+  ::-webkit-scrollbar{width:10px;height:10px}
+  ::-webkit-scrollbar-thumb{background:var(--line);border-radius:10px}
+  @keyframes hk-hint{0%,100%{transform:translateY(0);opacity:.5}50%{transform:translateY(9px);opacity:1}}
+  @keyframes hk-drift{0%{transform:translateX(0)}100%{transform:translateX(-3%)}}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</helmet>
+
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#3E5C49"/><g fill="#F3F1EB"><rect x="40" y="62" width="3" height="14"/><rect x="46" y="56" width="3" height="20"/><rect x="52" y="62" width="3" height="14"/></g><text x="50" y="44" font-family="serif" font-size="22" fill="#F3F1EB" text-anchor="middle">東</text></svg></template>
+<a href="#main" style="position:absolute;left:-9999px;top:0;z-index:200;padding:12px 18px;background:var(--accent);color:var(--bg);border-radius:0 0 10px 0" style-focus="left:0">本文へスキップ</a>
+
+<div data-intro="1" aria-hidden="true" style="position:fixed;inset:0;z-index:300;background:#0c0f08;display:flex;align-items:center;justify-content:center;transition:opacity 1.4s ease;will-change:opacity">
+  <video data-intro-video="1" muted playsinline autoplay preload="auto" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+    <source src="img/hero-intro.mp4" type="video/mp4">
+  </video>
+  <button data-intro-skip="1" type="button" style="position:absolute;right:clamp(18px,4vw,44px);bottom:clamp(18px,4vw,44px);z-index:2;padding:10px 22px;border:1px solid rgba(255,255,255,.45);border-radius:100px;color:#fff;font-size:12px;letter-spacing:.18em;background:rgba(0,0,0,.18);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:background .25s,border-color .25s" style-hover="background:rgba(0,0,0,.4);border-color:#fff">SKIP ▸</button>
+</div>
+
+<header data-nav="1" role="banner" style="color:var(--ink);position:fixed;top:0;left:0;right:0;z-index:120;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px clamp(18px,4vw,56px);background:var(--glass);backdrop-filter:blur(22px) saturate(1.4);-webkit-backdrop-filter:blur(22px) saturate(1.4);border-bottom:1px solid var(--line-2);transition:background .4s ease,box-shadow .4s ease">
+  <a href="#top" aria-label="東軽井沢市 ホーム" style="display:flex;align-items:center;gap:12px">
+    <span aria-hidden="true" style="display:inline-flex;width:26px;height:26px;align-items:flex-end;justify-content:center;gap:2px">
+      <span style="width:3px;height:14px;background:var(--accent);transform:skewX(-12deg)"></span>
+      <span style="width:3px;height:22px;background:var(--accent)"></span>
+      <span style="width:3px;height:14px;background:var(--accent);transform:skewX(12deg)"></span>
+    </span>
+    <span style="font-family:'Zen Old Mincho',serif;font-weight:600;font-size:19px;letter-spacing:.04em">東軽井沢市</span>
+  </a>
+  <nav aria-label="メインナビゲーション" style="display:flex;align-items:center;gap:clamp(14px,2vw,30px)">
+    <div style="display:none;align-items:center;gap:clamp(14px,2vw,30px)" data-navlinks="1">
+      <sc-for list="{{ navLinks }}" as="link" hint-placeholder-count="7">
+        <a href="{{ link.href }}" style="font-size:14px;font-weight:500;letter-spacing:.04em;color:var(--ink-2);padding:6px 2px;transition:color .25s" style-hover="color:var(--accent)">{{ link.label }}</a>
+      </sc-for>
+    </div>
+    <button onClick="{{ toggleTheme }}" aria-label="テーマ切り替え（ライト／ダーク）" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);transition:border-color .25s,transform .25s" style-hover="border-color:var(--accent);transform:rotate(180deg)">
+      <span aria-hidden="true" style="width:17px;height:17px;border-radius:50%;border:1.5px solid var(--ink);background:linear-gradient(90deg,var(--ink) 0 50%,transparent 50% 100%)"></span>
+    </button>
+    <a href="#welcome" style="display:none;padding:11px 22px;border-radius:100px;background:var(--accent);color:var(--bg);font-size:14px;font-weight:500;letter-spacing:.04em;transition:opacity .25s,transform .25s" style-hover="transform:translateY(-2px)" data-cta="1">移住相談</a>
+    <button onClick="{{ toggleMenu }}" aria-label="メニューを開く" data-burger="1" style="display:inline-flex;flex-direction:column;justify-content:center;gap:5px;width:40px;height:40px;align-items:center;border:1px solid var(--line);border-radius:50%">
+      <span aria-hidden="true" style="width:16px;height:1.5px;background:var(--ink)"></span>
+      <span aria-hidden="true" style="width:16px;height:1.5px;background:var(--ink)"></span>
+    </button>
+  </nav>
+</header>
+
+<sc-if value="{{ menu }}" hint-placeholder-val="{{ false }}">
+  <div role="dialog" aria-modal="true" aria-label="メニュー" style="position:fixed;inset:0;z-index:130;background:var(--glass-strong);backdrop-filter:blur(30px) saturate(1.4);-webkit-backdrop-filter:blur(30px) saturate(1.4);display:flex;flex-direction:column;padding:clamp(24px,6vw,72px)">
+    <div style="display:flex;justify-content:flex-end">
+      <button onClick="{{ toggleMenu }}" aria-label="メニューを閉じる" style="width:46px;height:46px;border:1px solid var(--line);border-radius:50%;font-size:22px;color:var(--ink)">×</button>
+    </div>
+    <nav aria-label="モバイルナビゲーション" style="margin-top:auto;margin-bottom:auto;display:flex;flex-direction:column;gap:8px">
+      <sc-for list="{{ navLinks }}" as="link" hint-placeholder-count="7">
+        <a href="{{ link.href }}" onClick="{{ closeMenu }}" style="font-family:'Zen Old Mincho',serif;font-size:clamp(30px,9vw,52px);font-weight:500;letter-spacing:.02em;padding:6px 0;color:var(--ink)">{{ link.label }}</a>
+      </sc-for>
+      <a href="#welcome" onClick="{{ closeMenu }}" style="margin-top:24px;align-self:flex-start;padding:14px 32px;border-radius:100px;background:var(--accent);color:var(--bg);font-size:16px;font-weight:500">移住の相談をする</a>
+    </nav>
+  </div>
+</sc-if>
+
+<main id="main" role="main" style="color:var(--ink)">
+
+<!-- ===================== HERO ===================== -->
+<section id="top" data-screen-label="ヒーロー" aria-label="東軽井沢市" style="position:relative;height:100svh;min-height:600px;overflow:hidden;display:flex;align-items:center;justify-content:center">
+  <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(180deg,var(--sky-1) 0%,var(--sky-2) 46%,var(--sky-3) 100%)"></div>
+  <div aria-hidden="true" data-parallax="22" style="position:absolute;left:-5%;right:-5%;bottom:-8%;height:72%;background:linear-gradient(180deg,var(--ridge-back),var(--ridge-back));opacity:.85;clip-path:polygon(0 46%,11% 30%,23% 44%,34% 24%,46% 40%,58% 22%,70% 38%,82% 25%,93% 41%,100% 30%,100% 100%,0 100%)"></div>
+  <div aria-hidden="true" data-parallax="48" style="position:absolute;left:-5%;right:-5%;bottom:-10%;height:62%;background:linear-gradient(180deg,var(--ridge-mid),var(--ridge-mid));opacity:.92;clip-path:polygon(0 56%,14% 36%,28% 54%,40% 32%,54% 50%,67% 30%,80% 48%,92% 34%,100% 50%,100% 100%,0 100%)"></div>
+  <div aria-hidden="true" data-parallax="84" style="position:absolute;left:-5%;right:-5%;bottom:-12%;height:48%;background:linear-gradient(180deg,var(--ridge-front),var(--ridge-front));clip-path:polygon(0 60%,16% 40%,33% 62%,48% 36%,63% 58%,78% 38%,90% 56%,100% 42%,100% 100%,0 100%)"></div>
+  <div aria-hidden="true" style="position:absolute;left:0;right:0;top:24%;height:34%;background:linear-gradient(180deg,transparent,var(--mist) 45%,var(--mist) 60%,transparent);filter:blur(8px)"></div>
+  <div aria-hidden="true" style="position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 18%,transparent 40%,rgba(0,0,0,.06) 100%)"></div>
+
+  <div style="position:relative;z-index:2;text-align:center;padding:0 24px;transform:translateY(-3vh)">
+    <p style="font-size:13px;font-weight:500;letter-spacing:.4em;text-transform:uppercase;color:var(--ink-2);margin-bottom:30px">Higashi-Karuizawa City</p>
+    <h1 style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:clamp(46px,9vw,128px);line-height:1.04;letter-spacing:.04em">東軽井沢市</h1>
+    <p style="font-family:'Newsreader',serif;font-style:italic;font-weight:300;font-size:clamp(22px,3.4vw,42px);margin-top:22px;color:var(--ink)">Quiet, by design.</p>
+    <p style="font-size:clamp(15px,2vw,20px);letter-spacing:.32em;margin-top:14px;color:var(--ink-2)">静けさを、未来へ。</p>
+  </div>
+
+  <a href="#city" aria-label="下へスクロール" style="position:absolute;left:50%;bottom:34px;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:10px;color:var(--ink-2)">
+    <span style="font-size:11px;letter-spacing:.3em;text-transform:uppercase">Scroll</span>
+    <span aria-hidden="true" data-hint="1" style="width:1px;height:46px;background:linear-gradient(var(--ink-2),transparent)"></span>
+  </a>
+</section>
+
+<!-- ===================== ① まちの紹介 ===================== -->
+<section id="city" data-screen-label="まちの紹介" style="padding:clamp(90px,13vw,190px) clamp(22px,6vw,120px);max-width:1320px;margin:0 auto">
+  <div data-reveal="1" style="max-width:980px">
+    <p style="font-size:13px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);margin-bottom:34px">01 ― The City</p>
+    <h2 style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:clamp(30px,5vw,72px);line-height:1.42;letter-spacing:.01em">自然と最先端技術が、<br>ひとつの景色になる都市。</h2>
+  </div>
+  <div data-reveal="1" data-reveal-delay="120" style="display:flex;flex-wrap:wrap;gap:clamp(30px,5vw,90px);margin-top:clamp(36px,5vw,64px);align-items:flex-start">
+    <p style="flex:1 1 340px;max-width:40em;font-size:clamp(15px,1.2vw,18px);line-height:2.1;color:var(--ink-2)">三方を山に囲まれた内陸の盆地に、人口約5万5千人の小さな街がある。古くは街道の宿場町として、近代には製糸と精密加工で栄え、いまは素材・化学・電子材料の研究開発で世界とつながる。<br><br>石と木とガラスで構成された落ち着いた街並み、歩く速度に合わせて設計された通り。北欧の都市計画思想と、山あいの里の静けさが、ひとつの景観のなかに同居している。</p>
+    <div style="flex:1 1 280px;border-top:1px solid var(--line);padding-top:24px">
+      <p style="font-family:'Newsreader',serif;font-style:italic;font-weight:300;font-size:clamp(19px,2.2vw,26px);line-height:1.5;color:var(--ink)">“日本の地方都市が、100年かけて理想的に成熟したら、どんな姿になっていたか。”</p>
+      <p style="margin-top:18px;font-size:13px;letter-spacing:.06em;color:var(--muted)">― 東軽井沢市という、ひとつの答え</p>
+    </div>
+  </div>
+
+  <div data-reveal="1" data-reveal-delay="180" style="margin-top:clamp(48px,7vw,96px);position:relative;height:clamp(280px,46vw,560px);border-radius:6px;overflow:hidden;box-shadow:var(--shadow)">
+    <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(180deg,var(--sky-1),var(--sky-2) 55%,var(--sky-3))"></div>
+    <div aria-hidden="true" data-parallax="30" style="position:absolute;left:-6%;right:-6%;bottom:-12%;height:78%;background:var(--ridge-back);opacity:.8;clip-path:polygon(0 50%,18% 28%,36% 48%,52% 26%,70% 46%,86% 28%,100% 44%,100% 100%,0 100%)"></div>
+    <div aria-hidden="true" data-parallax="56" style="position:absolute;left:-6%;right:-6%;bottom:-12%;height:60%;background:var(--ridge-mid);clip-path:polygon(0 58%,20% 36%,40% 58%,58% 34%,76% 56%,90% 38%,100% 52%,100% 100%,0 100%)"></div>
+    <div aria-hidden="true" style="position:absolute;left:0;right:0;top:30%;height:30%;background:linear-gradient(180deg,transparent,var(--mist),transparent);filter:blur(6px)"></div>
+    <p style="position:absolute;left:24px;bottom:20px;font-family:'SFMono-Regular',ui-monospace,monospace;font-size:11px;letter-spacing:.08em;color:var(--ink-2);opacity:.7">［ 朝霧の見晴の丘から望む市街と三方の山並み ］</p>
+  </div>
+</section>
+
+<!-- ===================== ② 数字で見る ===================== -->
+<section id="numbers" data-screen-label="数字で見る" style="background:var(--bg-2);padding:clamp(90px,13vw,190px) clamp(22px,6vw,120px);transition:background .6s ease">
+  <div style="max-width:1320px;margin:0 auto">
+    <div data-reveal="1" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:clamp(40px,6vw,80px)">
+      <h2 style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:clamp(28px,4.4vw,60px);line-height:1.3">数字で見る、<br>東軽井沢。</h2>
+      <p style="font-size:13px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--accent)">02 ― By the Numbers</p>
+    </div>
+    <div data-reveal="1" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden">
+      <sc-for list="{{ stats }}" as="s" hint-placeholder-count="6">
+        <div style="background:var(--bg-2);padding:clamp(28px,3.4vw,44px) clamp(24px,2.6vw,36px);min-height:200px;display:flex;flex-direction:column;justify-content:space-between;gap:18px">
+          <p style="font-size:12px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)">{{ s.en }}</p>
+          <div>
+            <p style="display:flex;align-items:baseline;gap:6px;color:var(--ink)"><span data-count="{{ s.value }}" data-decimals="{{ s.decimals }}" style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(46px,6vw,82px);line-height:.95;letter-spacing:-.01em">{{ s.display }}</span><span style="font-size:clamp(16px,1.6vw,22px);font-weight:500;color:var(--ink-2)">{{ s.unit }}</span></p>
+            <p style="margin-top:14px;font-size:15px;font-weight:500">{{ s.label }}</p>
+            <p style="font-size:13px;color:var(--muted);line-height:1.6">{{ s.sub }}</p>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ③ 四季 ===================== -->
+<section id="seasons" data-screen-label="四季" style="padding:clamp(90px,13vw,190px) 0">
+  <div data-reveal="1" style="max-width:1320px;margin:0 auto;padding:0 clamp(22px,6vw,120px);margin-bottom:clamp(40px,6vw,72px)">
+    <p style="font-size:13px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);margin-bottom:28px">03 ― Four Seasons</p>
+    <h2 style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:clamp(30px,5vw,72px);line-height:1.34">四季が、街の<br>カレンダーを書いている。</h2>
+  </div>
+  <div data-seasons-grid="1" style="display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,1.6vw,22px);padding:0 clamp(22px,6vw,120px);max-width:1320px;margin:0 auto">
+    <sc-for list="{{ seasons }}" as="se" hint-placeholder-count="4">
+      <article data-reveal="1" data-reveal-delay="{{ se.delay }}" style="position:relative;height:clamp(360px,40vw,480px);border-radius:6px;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;box-shadow:var(--shadow)">
+        <div aria-hidden="true" style="position:absolute;inset:0;background:{{ se.bg }};transition:transform 1s ease" style-hover="transform:scale(1.04)"></div>
+        <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 42%,rgba(0,0,0,.52))"></div>
+        <div style="position:relative;z-index:2;padding:clamp(22px,2.4vw,34px);color:#fff">
+          <p style="font-family:'Newsreader',serif;font-style:italic;font-size:14px;letter-spacing:.1em;opacity:.85">{{ se.en }}</p>
+          <h3 style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:clamp(34px,4vw,52px);line-height:1;margin:4px 0 14px">{{ se.jp }}</h3>
+          <p style="font-size:14px;line-height:1.7;max-width:24em;opacity:.92">{{ se.text }}</p>
+        </div>
+      </article>
+    </sc-for>
+  </div>
+</section>
+
+<!-- ===================== ④ 暮らす ===================== -->
+<section id="live" data-screen-label="暮らす" style="background:var(--bg-2);padding:clamp(90px,13vw,190px) clamp(22px,6vw,120px);transition:background .6s ease">
+  <div style="max-width:1320px;margin:0 auto">
+    <div data-reveal="1" style="max-width:760px;margin-bottom:clamp(44px,6vw,80px)">
+      <p style="font-size:13px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);margin-bottom:28px">04 ― Living Here</p>
+      <h2 style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:clamp(30px,5vw,72px);line-height:1.34">東京の半分の家賃で、<br>二倍の余白を。</h2>
+      <p style="margin-top:26px;font-size:clamp(15px,1.2vw,18px);line-height:2.1;color:var(--ink-2);max-width:38em">出産から高校卒業まで、切れ目のない子育て支援。待機児童ゼロ。どの住宅からも徒歩5分以内に緑地。急がず、比べず、けれど、つくることをやめない暮らしがここにある。</p>
+    </div>
+    <div data-reveal="1" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:clamp(16px,1.8vw,26px)">
+      <sc-for list="{{ living }}" as="f" hint-placeholder-count="6">
+        <div style="background:var(--card);backdrop-filter:blur(10px);border:1px solid var(--glass-line);border-radius:6px;padding:clamp(24px,2.4vw,34px);min-height:188px;display:flex;flex-direction:column;gap:14px">
+          <p style="font-family:'Newsreader',serif;font-size:16px;color:var(--accent)">{{ f.no }}</p>
+          <h3 style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:clamp(20px,1.8vw,26px)">{{ f.title }}</h3>
+          <p style="font-size:14px;line-height:1.85;color:var(--ink-2)">{{ f.text }}</p>
+        </div>
+      </sc-for>
+    </div>
+    <div data-reveal="1" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(16px,1.8vw,24px);margin-top:clamp(20px,2.4vw,28px)">
+      <div style="position:relative;height:clamp(240px,28vw,340px);border-radius:6px;overflow:hidden;display:flex;align-items:flex-end;box-shadow:var(--shadow)">
+        <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(135deg,#E9E0D1,#E6ECE4 60%,#D6E2DA)"></div>
+        <div aria-hidden="true" style="position:absolute;inset:0;background:radial-gradient(80% 60% at 30% 20%,rgba(255,244,224,.6),transparent 60%)"></div>
+        <p style="position:relative;z-index:2;padding:24px;font-family:'Zen Old Mincho',serif;font-size:clamp(22px,2.4vw,30px);color:#2a2c26">朝の風景</p>
+      </div>
+      <div style="position:relative;height:clamp(240px,28vw,340px);border-radius:6px;overflow:hidden;display:flex;align-items:flex-end;box-shadow:var(--shadow)">
+        <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(150deg,#1C2430,#28332F 55%,#33433A)"></div>
+        <div aria-hidden="true" style="position:absolute;inset:0;background:radial-gradient(2px 2px at 22% 64%,rgba(255,214,150,.9),transparent),radial-gradient(2px 2px at 38% 72%,rgba(255,214,150,.85),transparent),radial-gradient(2px 2px at 60% 60%,rgba(255,224,170,.9),transparent),radial-gradient(2px 2px at 74% 70%,rgba(255,214,150,.8),transparent),radial-gradient(2px 2px at 50% 80%,rgba(255,224,170,.85),transparent)"></div>
+        <p style="position:relative;z-index:2;padding:24px;font-family:'Zen Old Mincho',serif;font-size:clamp(22px,2.4vw,30px);color:#f3efe6">夜の風景</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ⑤ 働く ===================== -->
+<section id="work" data-screen-label="働く" style="padding:clamp(90px,13vw,190px) clamp(22px,6vw,120px);max-width:1320px;margin:0 auto">
+  <div data-reveal="1" style="max-width:820px;margin-bottom:clamp(44px,6vw,72px)">
+    <p style="font-size:13px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);margin-bottom:28px">05 ― Working Here</p>
+    <h2 style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:clamp(30px,5vw,72px);line-height:1.34">世界の製品の“見えない中身”を、<br>この盆地がつくっている。</h2>
+    <p style="margin-top:26px;font-size:clamp(15px,1.2vw,18px);line-height:2.1;color:var(--ink-2);max-width:38em">素材・化学・電子材料。最終製品ではなく、世界中の製品に組み込まれる高機能素材を供給する企業が、ひとつの盆地に集まる。研究者、エンジニア、スタートアップ ── 知が地区内を循環する街。</p>
+  </div>
+
+  <div data-reveal="1" style="display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,4vw,64px);align-items:center;background:var(--card);backdrop-filter:blur(10px);border:1px solid var(--glass-line);border-radius:8px;padding:clamp(26px,3vw,52px);box-shadow:var(--shadow)" data-stack="work">
+    <div>
+      <p style="font-size:12px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:22px">Interview</p>
+      <p style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:clamp(21px,2.4vw,32px);line-height:1.6">「最先端の研究と、家族とすごす夕方が、同じ一日のなかにある。通勤は22分。仕事を終えたら、緑道を子どもと歩いて家に帰る。」</p>
+      <p style="margin-top:26px;font-size:15px;font-weight:500">{{ interview.name }}</p>
+      <p style="font-size:13px;color:var(--muted)">{{ interview.role }}</p>
+    </div>
+    <div style="position:relative;height:clamp(260px,30vw,400px);border-radius:6px;overflow:hidden">
+      <img src="img/interview.jpg" alt="緑道を家族と散歩する半導体素材研究者の遠野さん" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%">
+      <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 62%,rgba(0,0,0,.32))"></div>
+      <p style="position:absolute;left:18px;bottom:14px;z-index:2;font-size:12px;letter-spacing:.06em;color:rgba(255,255,255,.88)">仕事帰りの千石川グリーンウェイにて</p>
+    </div>
+  </div>
+
+  <div data-reveal="1" style="margin-top:clamp(40px,5vw,64px)">
+    <p style="font-size:13px;color:var(--muted);letter-spacing:.06em;margin-bottom:22px">市を支える主要企業（架空）</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden">
+      <sc-for list="{{ companies }}" as="c" hint-placeholder-count="7">
+        <div style="background:var(--bg);padding:24px 26px;display:flex;flex-direction:column;gap:8px;min-height:120px;transition:background .3s" style-hover="background:var(--bg-2)">
+          <h3 style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:18px">{{ c.name }}</h3>
+          <p style="font-size:13px;color:var(--ink-2);line-height:1.6">{{ c.tag }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ⑥ 遊ぶ ===================== -->
+<section id="play" data-screen-label="遊ぶ" style="background:var(--bg-2);padding:clamp(90px,13vw,190px) clamp(22px,6vw,120px);transition:background .6s ease">
+  <div style="max-width:1320px;margin:0 auto">
+    <div data-reveal="1" style="margin-bottom:clamp(44px,6vw,72px)">
+      <p style="font-size:13px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);margin-bottom:28px">06 ― Playing Here</p>
+      <h2 style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:clamp(30px,5vw,72px);line-height:1.34">暮らしの延長に、観光がある。</h2>
+    </div>
+    <div data-play-grid="1" style="display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,1.6vw,22px)">
+      <sc-for list="{{ play }}" as="p" hint-placeholder-count="6">
+        <article data-reveal="1" data-reveal-delay="{{ p.delay }}" style="position:relative;height:clamp(300px,32vw,400px);border-radius:6px;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;box-shadow:var(--shadow)">
+          <div aria-hidden="true" style="position:absolute;inset:0;background:{{ p.bg }};transition:transform .8s ease" style-hover="transform:scale(1.05)"></div>
+          <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 42%,rgba(0,0,0,.55))"></div>
+          <div style="position:relative;z-index:2;padding:clamp(22px,2.2vw,30px);color:#fff">
+            <p style="font-family:'Newsreader',serif;font-style:italic;font-size:13px;opacity:.85">{{ p.en }}</p>
+            <h3 style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:clamp(22px,2.2vw,30px);margin-top:4px">{{ p.title }}</h3>
+            <p style="font-size:13px;margin-top:8px;opacity:.9;line-height:1.6">{{ p.text }}</p>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ⑦ 市民の暮らし ===================== -->
+<section id="life" data-screen-label="市民の暮らし" style="padding:clamp(90px,13vw,190px) clamp(22px,6vw,120px);max-width:1320px;margin:0 auto">
+  <div data-reveal="1" style="margin-bottom:clamp(44px,6vw,72px);max-width:760px">
+    <p style="font-size:13px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);margin-bottom:28px">07 ― The People</p>
+    <h2 style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:clamp(30px,5vw,72px);line-height:1.34">この街に暮らす、<br>三人の一日。</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(18px,2vw,28px)">
+    <sc-for list="{{ residents }}" as="r" hint-placeholder-count="3">
+      <article data-reveal="1" data-reveal-delay="{{ r.delay }}" style="background:var(--surface);border:1px solid var(--line);border-radius:8px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column">
+        <div style="position:relative">
+          <div role="img" aria-label="{{ r.alt }}" style="width:100%;height:clamp(230px,26vw,300px);background:{{ r.bg }}"></div>
+          <span style="position:absolute;top:14px;left:14px;z-index:3;padding:6px 12px;border-radius:100px;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);color:#fff;font-size:11px;font-weight:500;letter-spacing:.12em">{{ r.tag }}</span>
+        </div>
+        <div style="padding:clamp(22px,2.2vw,30px);display:flex;flex-direction:column;gap:14px;flex:1">
+          <p style="font-family:'Zen Old Mincho',serif;font-size:clamp(16px,1.5vw,20px);line-height:1.8;color:var(--ink)">{{ r.quote }}</p>
+          <div style="margin-top:auto;padding-top:14px;border-top:1px solid var(--line-2)">
+            <p style="font-size:15px;font-weight:500">{{ r.name }}<span style="font-size:13px;color:var(--muted);font-weight:400">　{{ r.age }}</span></p>
+            <p style="font-size:13px;color:var(--ink-2)">{{ r.role }}</p>
+          </div>
+        </div>
+      </article>
+    </sc-for>
+  </div>
+</section>
+
+<!-- ===================== ⑧ ニュース ===================== -->
+<section id="news" data-screen-label="ニュース" style="background:var(--bg-2);padding:clamp(90px,13vw,190px) clamp(22px,6vw,120px);transition:background .6s ease">
+  <div style="max-width:1100px;margin:0 auto">
+    <div data-reveal="1" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:18px;margin-bottom:clamp(36px,5vw,56px)">
+      <h2 style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:clamp(28px,4.4vw,58px);line-height:1.3">お知らせ</h2>
+      <p style="font-size:13px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--accent)">08 ― News</p>
+    </div>
+    <div data-reveal="1">
+      <sc-for list="{{ news }}" as="n" hint-placeholder-count="5">
+        <a href="#news" style="display:grid;grid-template-columns:120px 96px 1fr auto;gap:clamp(14px,2vw,32px);align-items:center;padding:clamp(20px,2.2vw,28px) 6px;border-top:1px solid var(--line);transition:padding-left .3s,background .3s" style-hover="padding-left:18px" data-newsrow="1">
+          <span style="font-family:'Newsreader',serif;font-size:15px;color:var(--muted)">{{ n.date }}</span>
+          <span style="justify-self:start;padding:5px 12px;border:1px solid var(--accent);border-radius:100px;font-size:11px;font-weight:500;letter-spacing:.08em;color:var(--accent)">{{ n.cat }}</span>
+          <span style="font-size:clamp(15px,1.3vw,18px);font-weight:500;line-height:1.6">{{ n.title }}</span>
+          <span aria-hidden="true" style="font-size:18px;color:var(--accent)">→</span>
+        </a>
+      </sc-for>
+      <div style="border-top:1px solid var(--line)"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ⑨ イベント ===================== -->
+<section id="events" data-screen-label="イベント" style="padding:clamp(90px,13vw,190px) clamp(22px,6vw,120px);max-width:1320px;margin:0 auto">
+  <div data-reveal="1" style="margin-bottom:clamp(44px,6vw,72px);max-width:760px">
+    <p style="font-size:13px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);margin-bottom:28px">09 ― Annual Events</p>
+    <h2 style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:clamp(30px,5vw,72px);line-height:1.34">季節が呼ぶ、<br>一年の催し。</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden">
+    <sc-for list="{{ events }}" as="e" hint-placeholder-count="8">
+      <article style="background:var(--bg);padding:clamp(24px,2.4vw,34px);min-height:190px;display:flex;flex-direction:column;gap:14px;transition:background .3s" style-hover="background:var(--bg-2)">
+        <p style="display:flex;align-items:baseline;gap:6px"><span style="font-family:'Newsreader',serif;font-size:clamp(34px,4vw,52px);line-height:1;color:var(--accent)">{{ e.m }}</span><span style="font-size:13px;color:var(--muted)">月</span></p>
+        <h3 style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:clamp(18px,1.7vw,22px);margin-top:auto">{{ e.name }}</h3>
+        <p style="font-size:13px;color:var(--ink-2);line-height:1.7">{{ e.desc }}</p>
+      </article>
+    </sc-for>
+  </div>
+</section>
+
+<!-- ===================== ⑩ ようこそ ===================== -->
+<section id="welcome" data-screen-label="ようこそ" style="position:relative;overflow:hidden;padding:clamp(100px,15vw,210px) clamp(22px,6vw,120px)">
+  <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(180deg,var(--sky-2),var(--sky-3))"></div>
+  <div aria-hidden="true" data-parallax="26" style="position:absolute;left:-6%;right:-6%;bottom:-12%;height:50%;background:var(--ridge-mid);opacity:.5;clip-path:polygon(0 58%,20% 34%,42% 56%,62% 32%,80% 54%,100% 36%,100% 100%,0 100%)"></div>
+  <div style="position:relative;z-index:2;max-width:1100px;margin:0 auto;text-align:center">
+    <p data-reveal="1" style="font-family:'Newsreader',serif;font-style:italic;font-weight:300;font-size:clamp(20px,2.4vw,30px);color:var(--ink-2)">Welcome to Higashi-Karuizawa.</p>
+    <h2 data-reveal="1" data-reveal-delay="80" style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:clamp(36px,7vw,96px);line-height:1.2;margin:18px 0 12px">東軽井沢へ、ようこそ。</h2>
+    <p data-reveal="1" data-reveal-delay="140" style="font-size:clamp(15px,1.4vw,19px);color:var(--ink-2);letter-spacing:.04em">いちばん速い街でも、大きい街でもない。けれど、いちばん「住み続けたい」と思える街でありたい。</p>
+    <div data-reveal="1" data-reveal-delay="200" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:clamp(14px,1.6vw,20px);margin-top:clamp(40px,5vw,64px)">
+      <sc-for list="{{ entries }}" as="en" hint-placeholder-count="4">
+        <a href="{{ en.href }}" style="position:relative;background:var(--card);backdrop-filter:blur(12px);border:1px solid var(--glass-line);border-radius:8px;padding:clamp(28px,3vw,40px) 26px;text-align:left;display:flex;flex-direction:column;gap:10px;min-height:170px;transition:transform .35s ease,border-color .35s ease" style-hover="transform:translateY(-6px);border-color:var(--accent)">
+          <p style="font-family:'Newsreader',serif;font-style:italic;font-size:14px;color:var(--accent)">{{ en.en }}</p>
+          <h3 style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:clamp(22px,2.2vw,30px);margin-top:auto">{{ en.title }}</h3>
+          <p style="font-size:13px;color:var(--ink-2);line-height:1.6">{{ en.text }}</p>
+          <span aria-hidden="true" style="position:absolute;right:22px;bottom:24px;font-size:18px;color:var(--accent)">→</span>
+        </a>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer role="contentinfo" style="color:var(--ink);background:var(--surface);border-top:1px solid var(--line);padding:clamp(56px,8vw,100px) clamp(22px,6vw,120px) clamp(40px,5vw,60px);transition:background .6s ease">
+  <div style="max-width:1320px;margin:0 auto;display:flex;flex-wrap:wrap;gap:clamp(32px,5vw,80px);justify-content:space-between">
+    <div style="max-width:340px">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
+        <span aria-hidden="true" style="display:inline-flex;width:24px;height:24px;align-items:flex-end;justify-content:center;gap:2px"><span style="width:3px;height:12px;background:var(--accent);transform:skewX(-12deg)"></span><span style="width:3px;height:20px;background:var(--accent)"></span><span style="width:3px;height:12px;background:var(--accent);transform:skewX(12deg)"></span></span>
+        <span style="font-family:'Zen Old Mincho',serif;font-weight:600;font-size:18px">東軽井沢市</span>
+      </div>
+      <p style="font-family:'Newsreader',serif;font-style:italic;font-size:18px;color:var(--ink-2)">Quiet, by design.</p>
+      <p style="font-size:13px;color:var(--muted);margin-top:14px;line-height:1.8">山に抱かれ、素材で世界とつながる山あいの研究都市。<br>人口 54,800 人／面積 約 132.4 km²。</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:clamp(28px,4vw,64px);flex:1 1 480px">
+      <sc-for list="{{ footerCols }}" as="col" hint-placeholder-count="3">
+        <div>
+          <p style="font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:16px">{{ col.head }}</p>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <sc-for list="{{ col.items }}" as="it" hint-placeholder-count="4">
+              <a href="{{ it.href }}" style="font-size:14px;color:var(--ink-2);transition:color .25s" style-hover="color:var(--accent)">{{ it.label }}</a>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+  <div style="max-width:1320px;margin:clamp(40px,5vw,64px) auto 0;padding-top:24px;border-top:1px solid var(--line-2);display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;font-size:12px;color:var(--muted)">
+    <p>© 2026 東軽井沢市役所 都市戦略部 都市ブランド室</p>
+    <p>本サイトに登場する企業・人物・施設はすべて架空のものです。</p>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:920},&quot;defaultTheme&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;system&quot;,&quot;light&quot;,&quot;dark&quot;],&quot;default&quot;:&quot;system&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;表示&quot;,&quot;label&quot;:&quot;初期テーマ&quot;},&quot;motion&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;表示&quot;,&quot;label&quot;:&quot;アニメーション&quot;},&quot;accent&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;forest&quot;,&quot;fuji&quot;,&quot;stone&quot;],&quot;default&quot;:&quot;forest&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;表示&quot;,&quot;label&quot;:&quot;アクセント（森／藤／石）&quot;}}">
+class Component extends DCLogic {
+  state = { menu: false, theme: 'light' };
+
+  componentDidMount() {
+    const root = document.documentElement;
+    // accent
+    const accent = this.props.accent || 'forest';
+    if (accent !== 'forest') root.setAttribute('data-accent', accent);
+    // theme
+    let theme = 'light';
+    try {
+      const saved = localStorage.getItem('hk-theme');
+      const pref = this.props.defaultTheme || 'system';
+      if (saved) theme = saved;
+      else if (pref === 'light' || pref === 'dark') theme = pref;
+      else theme = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+    } catch (e) {}
+    root.setAttribute('data-theme', theme);
+    this.setState({ theme });
+
+    this._reduced = (this.props.motion === false) ||
+      (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+
+    requestAnimationFrame(() => {
+      this._responsive();
+      this._setupReveal();
+      this._setupScroll();
+      this._setupIntro();
+      window.addEventListener('resize', this._responsive, { passive: true });
+    });
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this._responsive);
+    window.removeEventListener('scroll', this._onScroll);
+  }
+
+  _responsive = () => {
+    const wide = window.innerWidth >= 880;
+    const links = document.querySelector('[data-navlinks]');
+    const cta = document.querySelector('[data-cta]');
+    const burger = document.querySelector('[data-burger]');
+    if (links) links.style.display = wide ? 'flex' : 'none';
+    if (cta) cta.style.display = wide ? 'inline-flex' : 'none';
+    if (burger) burger.style.display = wide ? 'none' : 'inline-flex';
+    document.querySelectorAll('[data-stack="work"]').forEach(el => {
+      el.style.gridTemplateColumns = window.innerWidth >= 760 ? '1.1fr .9fr' : '1fr';
+    });
+    document.querySelectorAll('[data-newsrow]').forEach(el => {
+      el.style.gridTemplateColumns = window.innerWidth >= 720 ? '120px 96px 1fr auto' : '1fr auto';
+    });
+    const w = window.innerWidth;
+    const seasonCols = w >= 900 ? 'repeat(4,1fr)' : (w >= 560 ? 'repeat(2,1fr)' : '1fr');
+    document.querySelectorAll('[data-seasons-grid]').forEach(el => {
+      el.style.gridTemplateColumns = seasonCols;
+    });
+    const playCols = w >= 880 ? 'repeat(3,1fr)' : (w >= 560 ? 'repeat(2,1fr)' : '1fr');
+    document.querySelectorAll('[data-play-grid]').forEach(el => {
+      el.style.gridTemplateColumns = playCols;
+    });
+  };
+
+  toggleMenu = () => this.setState(s => ({ menu: !s.menu }));
+  closeMenu = () => this.setState({ menu: false });
+
+  toggleTheme = () => {
+    const t = this.state.theme === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', t);
+    this.setState({ theme: t });
+    try { localStorage.setItem('hk-theme', t); } catch (e) {}
+  };
+
+  _setupReveal() {
+    const els = Array.from(document.querySelectorAll('[data-reveal]'));
+    if (this._reduced || !('IntersectionObserver' in window)) {
+      els.forEach(e => { e.style.opacity = '1'; e.style.transform = 'none'; });
+      this._runCounts(document);
+      return;
+    }
+    els.forEach(e => {
+      const d = e.getAttribute('data-reveal-delay') || 0;
+      e.style.opacity = '0';
+      e.style.transform = 'translateY(28px)';
+      e.style.willChange = 'opacity, transform';
+      e.style.transition = 'opacity 1s cubic-bezier(.16,.84,.34,1) ' + d + 'ms, transform 1s cubic-bezier(.16,.84,.34,1) ' + d + 'ms';
+    });
+    const io = new IntersectionObserver((ents) => {
+      ents.forEach(en => {
+        if (en.isIntersecting) {
+          en.target.style.opacity = '1';
+          en.target.style.transform = 'none';
+          this._runCounts(en.target);
+          io.unobserve(en.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    els.forEach(e => io.observe(e));
+  }
+
+  _runCounts(scope) {
+    const ns = scope && scope.querySelectorAll ? scope.querySelectorAll('[data-count]') : [];
+    ns.forEach(n => {
+      if (n.dataset.done) return;
+      n.dataset.done = '1';
+      const target = parseFloat(n.getAttribute('data-count')) || 0;
+      const dec = parseInt(n.getAttribute('data-decimals') || '0', 10);
+      if (this._reduced) { n.textContent = this._fmt(target, dec); return; }
+      const dur = 1500, start = performance.now();
+      const ease = t => 1 - Math.pow(1 - t, 3);
+      const step = (now) => {
+        const p = Math.min(1, (now - start) / dur);
+        n.textContent = this._fmt(target * ease(p), dec);
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    });
+  }
+
+  _fmt(v, dec) {
+    const f = v.toFixed(dec).split('.');
+    f[0] = f[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    return f.join('.');
+  }
+
+  _setupIntro() {
+    const overlay = document.querySelector('[data-intro]');
+    if (!overlay || this._introInit) return;
+    this._introInit = true;
+    const video = document.querySelector('[data-intro-video]');
+    const skip = document.querySelector('[data-intro-skip]');
+    const hero = document.querySelector('#top');
+
+    if (this._reduced) { this._endIntro(true); return; }
+
+    if (hero) { hero.style.opacity = '0'; hero.style.transition = 'opacity 1.4s ease'; }
+    this._prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    window.scrollTo(0, 0);
+
+    const end = () => this._endIntro(false);
+    if (video) {
+      video.addEventListener('ended', end, { once: true });
+      video.addEventListener('error', end, { once: true });
+      const p = video.play && video.play();
+      if (p && p.catch) p.catch(() => {});
+    }
+    if (skip) skip.addEventListener('click', end);
+    this._introTimer = setTimeout(end, 30000);
+  }
+
+  _endIntro(instant) {
+    if (this._introEnded) return;
+    this._introEnded = true;
+    clearTimeout(this._introTimer);
+    const overlay = document.querySelector('[data-intro]');
+    const hero = document.querySelector('#top');
+    document.body.style.overflow = this._prevOverflow || '';
+    if (hero) hero.style.opacity = '1';
+    if (!overlay) return;
+    if (instant) { overlay.style.display = 'none'; return; }
+    overlay.style.opacity = '0';
+    overlay.style.pointerEvents = 'none';
+    setTimeout(() => { overlay.style.display = 'none'; }, 1500);
+  }
+
+  _setupScroll() {
+    const nav = document.querySelector('[data-nav]');
+    const layers = this._reduced ? [] : Array.from(document.querySelectorAll('[data-parallax]'));
+    let ticking = false;
+    this._onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const y = window.scrollY || window.pageYOffset;
+        if (nav) {
+          if (y > 24) {
+            nav.style.background = 'var(--glass-strong)';
+            nav.style.boxShadow = '0 18px 40px -32px rgba(0,0,0,.6)';
+          } else {
+            nav.style.background = 'var(--glass)';
+            nav.style.boxShadow = 'none';
+          }
+        }
+        const vh = window.innerHeight;
+        layers.forEach(l => {
+          const r = l.getBoundingClientRect();
+          const rel = ((r.top + r.height / 2) - vh / 2) / vh;
+          const sp = parseFloat(l.getAttribute('data-parallax')) || 0;
+          l.style.transform = 'translate3d(0,' + (-rel * sp) + 'px,0)';
+        });
+        ticking = false;
+      });
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    this._onScroll();
+  }
+
+  renderVals() {
+    const sg = (a, b, c) => 'linear-gradient(160deg,' + a + ' 0%,' + b + ' 50%,' + c + ' 100%)';
+    return {
+      menu: this.state.menu,
+      toggleMenu: this.toggleMenu,
+      closeMenu: this.closeMenu,
+      toggleTheme: this.toggleTheme,
+      navLinks: [
+        { href: '#city', label: 'まち' },
+        { href: '#numbers', label: '数字' },
+        { href: '#seasons', label: '四季' },
+        { href: '#live', label: '暮らす' },
+        { href: '#work', label: '働く' },
+        { href: '#play', label: '遊ぶ' },
+        { href: '#news', label: 'ニュース' }
+      ],
+      stats: [
+        { en: 'Population', value: 54800, decimals: 0, display: '54,800', unit: '人', label: '人口', sub: '令和8年推計・世帯 26,325' },
+        { en: 'Area', value: 132.4, decimals: 1, display: '132.4', unit: 'km²', label: '面積', sub: '市街化区域 約 18 km²' },
+        { en: 'Livability', value: 1, decimals: 0, display: '1', unit: '位', label: '住みやすさ', sub: '全国調査 5年連続 第1位' },
+        { en: 'Retention', value: 91.2, decimals: 1, display: '91.2', unit: '%', label: '10年定住率', sub: '全国でも高水準' },
+        { en: 'Commute', value: 22, decimals: 0, display: '22', unit: '分', label: '平均通勤時間', sub: '市独自の配車サービスが支える' },
+        { en: 'Green Space', value: 60, decimals: 0, display: '60', unit: '+', label: '公園・緑地', sub: 'どの家からも徒歩5分以内' }
+      ],
+      seasons: [
+        { en: 'Spring', jp: '春', delay: 0, text: '桜並木の下を歩く、菜の花の土手、宿場通りの花めぐり。', bg: "url('img/spring.jpg') center 28%/cover no-repeat" },
+        { en: 'Summer', jp: '夏', delay: 80, text: '冷涼な高原の風、見晴の丘の夜空に咲く花火と夏の音楽祭。', bg: "url('img/summer.jpg') center 35%/cover no-repeat" },
+        { en: 'Autumn', jp: '秋', delay: 160, text: '里山の実りと収穫祭、芋掘り、和ろうそくの宿場あかり祭。', bg: "url('img/autumn.jpg') center 28%/cover no-repeat" },
+        { en: 'Winter', jp: '冬', delay: 240, text: '晴天の雪景色、里山の雪あそび、温泉郷の雪見風呂。', bg: "url('img/winter.jpg') center 30%/cover no-repeat" }
+      ],
+      living: [
+        { no: '01', title: '子育て', text: '出産から高校卒業まで切れ目のない支援。保育料は第3子以降無償、待機児童ゼロを継続。' },
+        { no: '02', title: '住宅', text: '戸建も低層集合も、庭と中庭が標準。高断熱・パッシブ設計の新築に手厚い補助。' },
+        { no: '03', title: '教育', text: '探究・自然・ものづくりの三本柱。少人数学級と、研究機関と連携した実物教育。' },
+        { no: '04', title: '医療', text: '救命救急から在宅まで切れ目なく連携。市内は約15分で救急搬送できる配置。' },
+        { no: '05', title: 'カフェ', text: '焙煎所併設のコーヒー店、町家カフェ、緑道沿いのオープンカフェ。街歩きが日常に。' },
+        { no: '06', title: '世代循環', text: '保育園とシニア園が同じ建物に。支える人と支えられる人の境界を、ゆるやかに。' }
+      ],
+      interview: { name: '遠野 識（38）', role: '千石セミコンマテリアル／半導体素材 主任研究員' },
+      companies: [
+        { name: '白嶺マテリアル', tag: '特殊ガラス・光学材料で世界的シェア' },
+        { name: 'セントク化成', tag: '半導体製造用の高純度薬品・材料' },
+        { name: 'ミハラ電子材料', tag: '回路基板・封止材・電子部品材料' },
+        { name: '千石セミコンマテリアル', tag: 'ウェハ周辺・先端パッケージ材料' },
+        { name: 'コトブキ・エナジー', tag: '蓄電・水素関連材料／地域エネルギー' },
+        { name: '桑葉メディカル', tag: '人工関節・カテーテル等の医療材料' },
+        { name: 'トウカル・ロボティクス', tag: '精密ロボットと自動化システム' }
+      ],
+      play: [
+        { en: 'Onsen', title: '東軽井沢温泉郷', delay: 0, text: '湯けむりの宿と日帰り湯。冬の雪見風呂が名物。', bg: "url('img/onsen.jpg') center/cover no-repeat" },
+        { en: 'Greenway', title: '千石川グリーンウェイ', delay: 70, text: '市を縦断する約12kmの川沿い緑道。桜と新緑。', bg: "url('img/greenway.jpg') center/cover no-repeat" },
+        { en: 'Cycling', title: 'とうかるバイク', delay: 140, text: '駅と各拠点をつなぐシェアサイクル。歩く速度の街。', bg: "url('img/cycling.jpg') center/cover no-repeat" },
+        { en: 'Museum', title: '東軽井沢市立美術館', delay: 0, text: '石とガラスの建築。現代美術と地域の工芸を展示。', bg: "url('img/museum.jpg') center/cover no-repeat" },
+        { en: 'Science', title: '素材科学館 MATERIA', delay: 70, text: '市の素材産業を体験的に学べる。家族連れに人気。', bg: "url('img/science.jpg') center/cover no-repeat" },
+        { en: 'Night View', title: '見晴の丘の夜', delay: 140, text: '市街と三方の山並み、その上に広がる星空。', bg: "url('img/nightview.jpg') center/cover no-repeat" }
+      ],
+      residents: [
+        { tag: 'MORNING', age: '38', name: '三浦 奏', role: '白嶺マテリアル 研究員', alt: '朝、緑道を通って研究所へ向かう三浦さん', bg: "url('img/resident-morning.jpg') center 30%/cover no-repeat", quote: '朝の光のなかを、緑道づたいに研究所へ。歩いて通えるこの時間が、一日でいちばん頭が澄んでいる。', delay: 0 },
+        { tag: 'AFTERNOON', age: '68', name: '桑原 とき', role: 'シニア保育士', alt: '昼、保育園で子どもたちと過ごす桑原さん', bg: "url('img/resident-afternoon.jpg') center 35%/cover no-repeat", quote: '子育てを終えて、また子どもたちに囲まれている。となりはシニア園。笑い声が二つ分。', delay: 80 },
+        { tag: 'EVENING', age: '41', name: '千石 律', role: '宿場通り 町家カフェ店主', alt: '夜、カフェのカウンターでコーヒーを淹れる千石さん', bg: "url('img/resident-evening.jpg') center 30%/cover no-repeat", quote: '日が落ちると、通りに和ろうそくの灯りがともる。この静けさのために、店を構えた。', delay: 160 }
+      ],
+      news: [
+        { date: '2026.04.01', cat: '市政', title: '「東軽井沢2045」長期ビジョンを策定 ― サステナブル研究都市へ' },
+        { date: '2026.03.18', cat: '交通', title: '配車サービス「とうかるライド」、里山部へ対応エリアを拡充' },
+        { date: '2026.03.02', cat: '福祉', title: '「東軽保育園 × 東軽シニア園」開園 ― 世代循環ケアの拠点に' },
+        { date: '2026.02.20', cat: '文化', title: '東軽井沢国際ガラス・ビエンナーレ、今秋の開催が決定' },
+        { date: '2026.02.06', cat: 'イベント', title: '「雪あかりと温泉まつり」開催 ― 温泉郷が灯りに包まれる二夜' }
+      ],
+      events: [
+        { m: '03', name: '宿場ひな巡り', desc: '町家に雛飾りが並ぶ、春のはじまり。' },
+        { m: '04', name: '千石川さくら回廊', desc: '桜並木のライトアップと緑道の屋台。' },
+        { m: '07', name: '東軽サイエンス・サマー', desc: '企業と研究機関による子ども科学イベント。' },
+        { m: '08', name: '星空ナイト＆夏の音楽祭', desc: '見晴の丘の天体観察と野外コンサート。' },
+        { m: '10', name: '宿場あかり祭', desc: '和ろうそくが通りを照らす、市最大の催し。' },
+        { m: '11', name: '国際ガラス・ビエンナーレ', desc: '素材をテーマにした隔年の国際芸術祭。' },
+        { m: '12', name: 'ふじ色イルミネーション', desc: '駅前と緑道をめぐる、冬の光の回廊。' },
+        { m: '02', name: '雪あかりと温泉まつり', desc: '雪景色の温泉郷の湯めぐりとライトアップ。' }
+      ],
+      entries: [
+        { en: 'Move here', title: '移住する', href: '#welcome', text: '仕事・住まい・学校・医療を一括で相談。お試し移住も。' },
+        { en: 'Work here', title: '働く', href: '#work', text: '素材研究の最前線と、徒歩で帰れる暮らしの両立。' },
+        { en: 'Visit', title: '観光する', href: '#play', text: '温泉、宿場通り、美術館、四季の祭り。' },
+        { en: 'City Hall', title: '市役所', href: '#welcome', text: '行かない・書かない・待たない、オンライン行政。' }
+      ],
+      footerCols: [
+        { head: 'Live', items: [{ label: '移住・定住', href: '#welcome' }, { label: '子育て・教育', href: '#live' }, { label: '医療・福祉', href: '#live' }, { label: '住まいを探す', href: '#welcome' }] },
+        { head: 'Discover', items: [{ label: '四季', href: '#seasons' }, { label: '観光・文化', href: '#play' }, { label: 'イベント', href: '#events' }, { label: 'お知らせ', href: '#news' }] },
+        { head: 'City Hall', items: [{ label: '市の概要', href: '#city' }, { label: '産業・企業', href: '#work' }, { label: '東軽井沢2045', href: '#welcome' }, { label: 'お問い合わせ', href: '#welcome' }] }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
