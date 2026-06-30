@@ -18,6 +18,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&family=Zen+Old+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
 <script src="image-slot.js"></script>
 <script src="scripts/today.js"></script>
+<script src="scripts/observation.js"></script>
+<link rel="stylesheet" href="observation.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"GovernmentOrganization","name":"東軽井沢市","alternateName":"Higashi-Karuizawa City","slogan":"静けさを、未来へ。","description":"山に抱かれ、素材で世界とつながる山あいの研究都市。"}</script>
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
@@ -123,7 +125,8 @@
   <div aria-hidden="true" style="position:absolute;left:0;right:0;top:24%;height:34%;background:linear-gradient(180deg,transparent,var(--mist) 45%,var(--mist) 60%,transparent);filter:blur(8px)"></div>
   <div aria-hidden="true" style="position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 18%,transparent 40%,rgba(0,0,0,.06) 100%)"></div>
 
-  <div data-today-card="1" aria-label="今日の東軽井沢" style="position:absolute;z-index:3;left:clamp(16px,4vw,56px);top:clamp(84px,11vh,124px);width:clamp(188px,19vw,260px);max-width:calc(100% - 32px);background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:0 22px 54px -46px rgba(27,30,26,.45);padding:clamp(15px,1.3vw,22px) clamp(16px,1.3vw,22px);text-align:left">
+  <div style="position:absolute;z-index:3;left:clamp(16px,4vw,56px);top:clamp(84px,11vh,124px);width:clamp(188px,19vw,260px);max-width:calc(100% - 32px);display:flex;flex-direction:column-reverse;gap:clamp(12px,1.3vw,16px)">
+  <div data-today-card="1" aria-label="今日の東軽井沢" style="background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:0 22px 54px -46px rgba(27,30,26,.45);padding:clamp(15px,1.3vw,22px) clamp(16px,1.3vw,22px);text-align:left">
     <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
       <span data-today-dot="1" aria-hidden="true" style="width:8px;height:8px;border-radius:50%;background:var(--accent);transition:background .6s ease"></span>
       <span style="font-size:11px;letter-spacing:.16em;color:var(--muted)">今日の東軽井沢</span>
@@ -134,12 +137,28 @@
       <span style="font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)">現在</span>
       <span id="hk-date" style="font-family:'Zen Old Mincho',serif;font-size:clamp(13px,1vw,15px)">2026年7月12日（土）</span>
       <span aria-hidden="true" style="width:3px;height:3px;border-radius:50%;background:var(--line);align-self:center"></span>
-      <span id="hk-time" style="font-family:'Newsreader',serif;font-size:clamp(13px,1vw,15px)">7:12</span>
-      <span aria-hidden="true" style="width:3px;height:3px;border-radius:50%;background:var(--line);align-self:center"></span>
       <span id="hk-temp" style="font-family:'Newsreader',serif;font-size:clamp(13px,1vw,15px)">22℃</span>
+      <span aria-hidden="true" style="width:3px;height:3px;border-radius:50%;background:var(--line);align-self:center"></span>
+      <span id="hk-humidity" style="font-family:'Newsreader',serif;font-size:clamp(13px,1vw,15px)">湿度 56%</span>
     </div>
     <p id="hk-message" style="margin-top:12px;font-size:clamp(12px,.9vw,14px);line-height:1.8;color:var(--ink);text-wrap:pretty">今日は川沿いのお散歩がおすすめです。</p>
-    <!-- 将来のパネル（ライブカメラ / ニュース / 天気 / 市報 など）はここに追加 -->
+  </div>
+
+  <div class="obs-camera obs-camera--mini" data-observation-camera data-base-path="assets/images/observation/" data-station-name="東軽井沢駅前" data-station-code="Observation Camera 01" aria-label="定点観測 東軽井沢駅前">
+    <div class="obs-frame">
+      <img class="obs-img" data-cam-img alt="東軽井沢駅前の定点観測画像">
+      <div class="obs-scrim-top" aria-hidden="true"></div>
+      <div class="obs-scrim-bottom" aria-hidden="true"></div>
+      <div class="obs-tl">
+        <p class="obs-place">📍 東軽井沢駅前 定点観測</p>
+        <p class="obs-date" data-cam-date>2026年7月18日（土）</p>
+        <p class="obs-time" data-cam-time>09:42</p>
+      </div>
+      <p class="obs-code">Observation Camera 01</p>
+      <p class="obs-update" data-cam-update>約10分前更新</p>
+    </div>
+  </div>
+
   </div>
 
   <div style="position:relative;z-index:2;text-align:center;padding:0 24px;transform:translateY(-3vh)">
@@ -459,6 +478,7 @@ class Component extends DCLogic {
       this._setupScroll();
       this._setupIntro();
       this._setupToday();
+      this._setupObservation();
       window.addEventListener('resize', this._responsive, { passive: true });
     });
   }
@@ -507,6 +527,12 @@ class Component extends DCLogic {
     tries = tries || 0;
     if (window.HKToday && window.HKToday.init) { window.HKToday.init(); return; }
     if (tries < 50) setTimeout(() => this._setupToday(tries + 1), 100);
+  };
+
+  _setupObservation = (tries) => {
+    tries = tries || 0;
+    if (window.initObservationCameras) { window.initObservationCameras(); return; }
+    if (tries < 50) setTimeout(() => this._setupObservation(tries + 1), 100);
   };
 
   _setupReveal() {
