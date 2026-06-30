@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="../support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="東軽井沢市お知らせ ─ 保育園と高齢者通所施設を同じ建物に併設した「東軽保育園 × 東軽シニア園」が開園。世代循環ケアの象徴的拠点として、保育と介護のモデル都市づくりを進めます。">
+<meta property="og:title" content="「東軽保育園 × 東軽シニア園」開園 ― 世代循環ケアの拠点に｜東軽井沢市">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&family=Zen+Old+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  :root{
+    --bg:#F3F1EB; --bg-2:#ECE9E1; --surface:#FBFAF6;
+    --ink:#1B1E1A; --ink-2:#4A4E45; --muted:#7C8076;
+    --line:rgba(27,30,26,.12); --line-2:rgba(27,30,26,.07);
+    --green:#3E5C49; --green-soft:#5C7A66;
+    --accent:#3E5C49;
+    --glass:rgba(243,241,235,.72); --glass-strong:rgba(243,241,235,.9); --glass-line:rgba(255,255,255,.55);
+    --card:rgba(251,250,246,.7);
+    --shadow:0 30px 70px -45px rgba(27,30,26,.5);
+  }
+  [data-theme="dark"]{
+    --bg:#101309; --bg-2:#14180F; --surface:#181C12;
+    --ink:#ECEAE0; --ink-2:#BFC2B6; --muted:#878B7E;
+    --line:rgba(236,234,224,.14); --line-2:rgba(236,234,224,.07);
+    --green:#9CC4A8; --green-soft:#7FA98B;
+    --accent:#9CC4A8;
+    --glass:rgba(16,19,9,.66); --glass-strong:rgba(16,19,9,.88); --glass-line:rgba(255,255,255,.07);
+    --card:rgba(24,28,18,.6);
+    --shadow:0 30px 80px -45px rgba(0,0,0,.85);
+  }
+  body{background:var(--bg);color:var(--ink);font-family:"Zen Kaku Gothic New",sans-serif;font-weight:400;line-height:1.85;-webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background .6s ease,color .6s ease}
+  a{color:inherit;text-decoration:none}
+  button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+  ::selection{background:var(--accent);color:var(--bg)}
+  img{max-width:100%;display:block}
+  ::-webkit-scrollbar{width:10px;height:10px}
+  ::-webkit-scrollbar-thumb{background:var(--line);border-radius:10px}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</helmet>
+
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#3E5C49"/><text x="50" y="60" font-family="serif" font-size="40" fill="#F3F1EB" text-anchor="middle">東</text></svg></template>
+<a href="#article" style="position:absolute;left:-9999px;top:0;z-index:200;padding:12px 18px;background:var(--accent);color:var(--bg);border-radius:0 0 10px 0" style-focus="left:0">本文へスキップ</a>
+
+<header data-nav="1" role="banner" style="color:var(--ink);position:fixed;top:0;left:0;right:0;z-index:120;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px clamp(18px,4vw,56px);background:var(--glass);backdrop-filter:blur(22px) saturate(1.4);-webkit-backdrop-filter:blur(22px) saturate(1.4);border-bottom:1px solid var(--line-2);transition:background .4s ease,box-shadow .4s ease">
+  <a href="../index.html" aria-label="東軽井沢市 ホームへ戻る" style="display:flex;align-items:center;gap:10px">
+    <img src="../img/logo.png?v=2" alt="" aria-hidden="true" width="30" height="29" style="width:30px;height:auto;display:block">
+    <span style="font-family:'Zen Old Mincho',serif;font-weight:600;font-size:19px;letter-spacing:.04em">東軽井沢市</span>
+  </a>
+  <nav aria-label="ナビゲーション" style="display:flex;align-items:center;gap:clamp(14px,2vw,28px)">
+    <a href="../index.html#news" style="display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:500;letter-spacing:.04em;color:var(--ink-2);transition:color .25s" style-hover="color:var(--accent)"><span aria-hidden="true">←</span>お知らせ一覧</a>
+    <button onClick="{{ toggleTheme }}" aria-label="テーマ切り替え（ライト／ダーク）" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);transition:border-color .25s,transform .25s" style-hover="border-color:var(--accent);transform:rotate(180deg)">
+      <span aria-hidden="true" style="width:17px;height:17px;border-radius:50%;border:1.5px solid var(--ink);background:linear-gradient(90deg,var(--ink) 0 50%,transparent 50% 100%)"></span>
+    </button>
+  </nav>
+</header>
+
+<main id="main" role="main" style="color:var(--ink)">
+<article id="article" data-screen-label="お知らせ記事">
+
+  <!-- 記事ヘッダー -->
+  <div style="max-width:820px;margin:0 auto;padding:clamp(116px,16vw,176px) clamp(22px,6vw,40px) clamp(36px,5vw,56px)">
+    <div data-reveal="1" style="display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;margin-bottom:30px">
+      <span style="padding:5px 13px;border:1px solid var(--accent);border-radius:100px;font-size:11px;font-weight:500;letter-spacing:.1em;color:var(--accent)">福祉</span>
+      <span style="font-family:'Newsreader',serif;font-size:15px;color:var(--muted)">2026年3月2日（月）</span>
+    </div>
+    <h1 data-reveal="1" data-reveal-delay="60" style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:clamp(30px,5.2vw,60px);line-height:1.42;letter-spacing:.01em">「東軽保育園 × 東軽シニア園」開園<br>― 世代循環ケアの拠点に</h1>
+    <p data-reveal="1" data-reveal-delay="120" style="margin-top:28px;font-size:clamp(16px,1.4vw,19px);line-height:2.05;color:var(--ink-2)">保育園と高齢者の通所施設を、ひとつの建物に併設する。東軽井沢市が「保育と介護のモデル都市」の中核施設として整備してきた「東軽保育園 × 東軽シニア園」が、駅前・中央地区に開園しました。子どもとシニアが一日の多くを共に過ごす、世代循環ケアの象徴的な拠点です。</p>
+    <p data-reveal="1" data-reveal-delay="160" style="margin-top:26px;font-size:13px;letter-spacing:.04em;color:var(--muted)">東軽井沢市役所　こども未来部・健康福祉部</p>
+  </div>
+
+  <!-- ヒーロー画像 -->
+  <figure data-reveal="1" style="margin:0 auto;max-width:1200px;padding:0 clamp(0px,3vw,40px)">
+    <div style="position:relative;height:clamp(280px,52vw,620px);overflow:hidden;border-radius:clamp(0px,1vw,8px);box-shadow:var(--shadow)">
+      <img src="../img/hoiku-senior-en.png" alt="保育園と高齢者通所施設を併設した「東軽保育園 × 東軽シニア園」の全景。中庭を子どもとシニアが共有する" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%">
+    </div>
+    <figcaption style="max-width:820px;margin:14px auto 0;padding:0 clamp(22px,6vw,40px);font-size:13px;color:var(--muted);line-height:1.7">保育園と高齢者の通所施設を、ひとつの建物に併設。中庭をはさんで、子どもの遊び場とシニアの憩いの場がつながる。</figcaption>
+  </figure>
+
+  <!-- 本文 -->
+  <div style="max-width:720px;margin:0 auto;padding:clamp(46px,7vw,84px) clamp(22px,6vw,40px) clamp(40px,5vw,60px)">
+
+    <p data-reveal="1" style="font-size:clamp(16px,1.2vw,18px);line-height:2.15;color:var(--ink);margin-bottom:1.9em">東軽井沢市は3月2日、保育園と高齢者の通所施設を同一の敷地・同一の建物に併設した複合施設「東軽保育園 × 東軽シニア園」を開園しました。市民のおよそ3人に1人が高齢者という成熟した人口構成のなかで、保育と介護を別々の制度として扱うのではなく、世代をゆるやかにつなぎ直す ── 市が都市政策の中心に据える「世代循環ケア」を、もっとも象徴的なかたちで実現する施設です。</p>
+
+    <h2 data-reveal="1" style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:clamp(22px,2.4vw,30px);line-height:1.5;margin:1.6em 0 .9em">支える人と、支えられる人の境界を、ゆるやかに</h2>
+    <p data-reveal="1" style="font-size:clamp(16px,1.2vw,18px);line-height:2.15;color:var(--ink);margin-bottom:1.9em">「子どもを育て終えた世代が、次の子どもを育てる。介護される側が、誰かを支える側にもなる」。世代と役割を循環させることで、人手不足を強みに変え、高齢者の生きがいと子育ての安心を同時に生み出す。それが、この街の考え方です。新しい施設では、保育園児とシニア園の利用者が一日の多くの時間を共有し、行事も、食事も、遊びも共にします。子どもは多世代のなかで育ち、シニアは役割と笑顔を得る。施設は、子どもの成長とシニアの介護予防を同時に実現する全国モデルとして設計されました。</p>
+
+    <!-- 引用 -->
+    <blockquote data-reveal="1" style="margin:2.2em 0;padding:clamp(26px,3vw,40px) clamp(24px,3vw,40px);background:var(--card);backdrop-filter:blur(10px);border:1px solid var(--glass-line);border-left:3px solid var(--accent);border-radius:6px">
+      <p style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:clamp(19px,2vw,26px);line-height:1.85;color:var(--ink)">「介護される人から、まだ働ける人へ。役割の捉え方を変えるだけで、街はずっとあたたかくなります。」</p>
+      <p style="margin-top:18px;font-size:14px;color:var(--muted)">― 結城 怜 市長</p>
+    </blockquote>
+
+    <h2 data-reveal="1" style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:clamp(22px,2.4vw,30px);line-height:1.5;margin:1.6em 0 .9em">シニア保育士制度の、実践の場として</h2>
+    <p data-reveal="1" style="font-size:clamp(16px,1.2vw,18px);line-height:2.15;color:var(--ink);margin-bottom:1.9em">併設施設は、子育てを終えたシニアがその経験を活かして保育の現場に立つ「シニア保育士制度」の実践の場でもあります。市独自の養成講座（無料）を修了したシニアが、有資格の保育士を補佐する担い手として有償で活躍。勤務はシフト制で、短時間・週数日から、年齢に合わせた無理のない働き方が選べます。活動には報酬に加え、健康活動や地域貢献に応じて付与される「とうかる元気ポイント」が加わり、暮らしに還元されます。</p>
+
+    <h2 data-reveal="1" style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:clamp(22px,2.4vw,30px);line-height:1.5;margin:1.6em 0 .9em">「待機児童ゼロ」の、その先へ</h2>
+    <p data-reveal="1" style="font-size:clamp(16px,1.2vw,18px);line-height:2.15;color:var(--ink);margin-bottom:1.9em">市は「待機児童ゼロ」を継続するだけでなく、保育の担い手そのものを街全体で増やす仕組みづくりを進めています。今回の開園は、シニア保育士制度、市内の育児経験者が研修・登録を経て病児・夜間にも対応する「ベビーシッター登録制度」、そして要介護への移行を防ぐ予防型の通所施設と並ぶ、世代循環ケアの一連の取り組みの要に位置づけられます。市は施設での交流が介護予防と子どもの育ちに与える効果をデータで検証し、全国へ発信していく方針です。</p>
+
+    <!-- 施設概要 -->
+    <div data-reveal="1" style="margin:2.4em 0;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--surface)">
+      <p style="padding:18px clamp(20px,2.4vw,28px);border-bottom:1px solid var(--line-2);font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)">施設概要</p>
+      <dl style="margin:0">
+        <div data-fact="1" style="display:grid;grid-template-columns:120px 1fr;gap:16px;padding:16px clamp(20px,2.4vw,28px);border-bottom:1px solid var(--line-2)"><dt style="font-size:14px;color:var(--muted)">名称</dt><dd style="font-size:15px;color:var(--ink)">東軽保育園 × 東軽シニア園</dd></div>
+        <div data-fact="1" style="display:grid;grid-template-columns:120px 1fr;gap:16px;padding:16px clamp(20px,2.4vw,28px);border-bottom:1px solid var(--line-2)"><dt style="font-size:14px;color:var(--muted)">所在</dt><dd style="font-size:15px;color:var(--ink)">駅前・中央地区</dd></div>
+        <div data-fact="1" style="display:grid;grid-template-columns:120px 1fr;gap:16px;padding:16px clamp(20px,2.4vw,28px);border-bottom:1px solid var(--line-2)"><dt style="font-size:14px;color:var(--muted)">開園日</dt><dd style="font-size:15px;color:var(--ink)">2026年3月2日</dd></div>
+        <div data-fact="1" style="display:grid;grid-template-columns:120px 1fr;gap:16px;padding:16px clamp(20px,2.4vw,28px);border-bottom:1px solid var(--line-2)"><dt style="font-size:14px;color:var(--muted)">構成</dt><dd style="font-size:15px;color:var(--ink)">認可保育園と高齢者通所施設の併設（多世代交流型）</dd></div>
+        <div data-fact="1" style="display:grid;grid-template-columns:120px 1fr;gap:16px;padding:16px clamp(20px,2.4vw,28px)"><dt style="font-size:14px;color:var(--muted)">関連制度</dt><dd style="font-size:15px;color:var(--ink)">シニア保育士制度／とうかる元気ポイント</dd></div>
+      </dl>
+    </div>
+
+    <!-- 締めの画像 -->
+    <figure data-reveal="1" style="margin:2.4em 0 1.9em">
+      <div style="position:relative;height:clamp(220px,34vw,360px);overflow:hidden;border-radius:8px;box-shadow:var(--shadow)">
+        <img src="../img/senior-sanpo.png" alt="散歩カートを押すシニアと、園児・保育士の世代を超えた散歩" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%">
+      </div>
+      <figcaption style="margin-top:14px;font-size:13px;color:var(--muted);line-height:1.7">緑道を歩く、世代を超えた散歩の時間。子どもにとっては「もう一人のおじいちゃん」が、シニアにとっては役割と笑顔が増える。</figcaption>
+    </figure>
+
+    <p data-reveal="1" style="font-size:clamp(16px,1.2vw,18px);line-height:2.15;color:var(--ink)">「東軽保育園 × 東軽シニア園」の取り組みは、長期構想「東軽井沢2045」が掲げる〈全世代が安心して暮らせる街〉の実践です。急がず、比べず、けれど、つくることをやめない ── この街は、静けさを保ったまま、世代がたがいに支え合う暮らしのかたちを、これからも一つずつ整えていきます。</p>
+
+  </div>
+
+  <!-- 関連・戻る -->
+  <div style="max-width:720px;margin:0 auto;padding:0 clamp(22px,6vw,40px) clamp(70px,10vw,120px)">
+    <div data-reveal="1" style="padding-top:clamp(32px,4vw,48px);border-top:1px solid var(--line)">
+      <p style="font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:22px">関連するお知らせ</p>
+      <div style="display:flex;flex-direction:column">
+        <a href="toukaru-2045.html" style="display:grid;grid-template-columns:96px 1fr auto;gap:16px;align-items:center;padding:18px 4px;border-top:1px solid var(--line-2);transition:padding-left .3s" style-hover="padding-left:12px"><span style="font-family:'Newsreader',serif;font-size:14px;color:var(--muted)">2026.04.01</span><span style="font-size:15px;font-weight:500;line-height:1.6">「東軽井沢2045」長期ビジョンを策定 ― サステナブル研究都市へ</span><span aria-hidden="true" style="color:var(--accent)">→</span></a>
+        <a href="toukaru-ride.html" style="display:grid;grid-template-columns:96px 1fr auto;gap:16px;align-items:center;padding:18px 4px;border-top:1px solid var(--line-2);transition:padding-left .3s" style-hover="padding-left:12px"><span style="font-family:'Newsreader',serif;font-size:14px;color:var(--muted)">2026.03.18</span><span style="font-size:15px;font-weight:500;line-height:1.6">配車サービス「とうかるライド」、里山部へ対応エリアを拡充</span><span aria-hidden="true" style="color:var(--accent)">→</span></a>
+        <div style="border-top:1px solid var(--line-2)"></div>
+      </div>
+      <a href="../index.html#news" style="display:inline-flex;align-items:center;gap:9px;margin-top:clamp(34px,4vw,48px);padding:13px 26px;border:1px solid var(--line);border-radius:100px;font-size:14px;font-weight:500;color:var(--ink);transition:border-color .25s,transform .25s" style-hover="border-color:var(--accent);transform:translateX(-3px)"><span aria-hidden="true">←</span>お知らせ一覧へ戻る</a>
+    </div>
+  </div>
+
+</article>
+</main>
+
+<footer role="contentinfo" style="color:var(--ink);background:var(--surface);border-top:1px solid var(--line);padding:clamp(48px,7vw,80px) clamp(22px,6vw,120px) clamp(36px,5vw,52px);transition:background .6s ease">
+  <div style="max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between">
+    <a href="../index.html" style="display:flex;align-items:center;gap:12px">
+      <img src="../img/logo.png?v=2" alt="" aria-hidden="true" width="26" height="25" style="width:26px;height:auto">
+      <span style="font-family:'Zen Old Mincho',serif;font-weight:600;font-size:17px">東軽井沢市</span>
+      <span style="font-family:'Newsreader',serif;font-style:italic;font-size:15px;color:var(--ink-2)">Quiet, by design.</span>
+    </a>
+    <p style="font-size:12px;color:var(--muted)">© 2026 東軽井沢市役所 都市戦略部 都市ブランド室</p>
+  </div>
+  <p style="max-width:1100px;margin:18px auto 0;font-size:12px;color:var(--muted)">本サイトに登場する企業・人物・施設はすべて架空のものです。</p>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  state = { theme: 'light' };
+
+  componentDidMount() {
+    const root = document.documentElement;
+    let theme = 'light';
+    try {
+      const saved = localStorage.getItem('hk-theme');
+      if (saved) theme = saved;
+      else theme = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+    } catch (e) {}
+    root.setAttribute('data-theme', theme);
+    this.setState({ theme });
+
+    this._reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    requestAnimationFrame(() => {
+      this._setupReveal();
+      this._setupScroll();
+      window.addEventListener('resize', this._responsive, { passive: true });
+      this._responsive();
+    });
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this._responsive);
+    window.removeEventListener('scroll', this._onScroll);
+  }
+
+  _responsive = () => {
+    const narrow = window.innerWidth < 560;
+    document.querySelectorAll('[data-fact]').forEach(el => {
+      el.style.gridTemplateColumns = narrow ? '1fr' : '120px 1fr';
+      el.style.gap = narrow ? '4px' : '16px';
+    });
+  };
+
+  toggleTheme = () => {
+    const t = this.state.theme === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', t);
+    this.setState({ theme: t });
+    try { localStorage.setItem('hk-theme', t); } catch (e) {}
+  };
+
+  _setupReveal() {
+    const els = Array.from(document.querySelectorAll('[data-reveal]'));
+    if (this._reduced || !('IntersectionObserver' in window)) {
+      els.forEach(e => { e.style.opacity = '1'; e.style.transform = 'none'; });
+      return;
+    }
+    els.forEach(e => {
+      const d = e.getAttribute('data-reveal-delay') || 0;
+      e.style.opacity = '0';
+      e.style.transform = 'translateY(24px)';
+      e.style.willChange = 'opacity, transform';
+      e.style.transition = 'opacity .9s cubic-bezier(.16,.84,.34,1) ' + d + 'ms, transform .9s cubic-bezier(.16,.84,.34,1) ' + d + 'ms';
+    });
+    const io = new IntersectionObserver((ents) => {
+      ents.forEach(en => {
+        if (en.isIntersecting) {
+          en.target.style.opacity = '1';
+          en.target.style.transform = 'none';
+          io.unobserve(en.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    els.forEach(e => io.observe(e));
+  }
+
+  _setupScroll() {
+    const nav = document.querySelector('[data-nav]');
+    let ticking = false;
+    this._onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const y = window.scrollY || window.pageYOffset;
+        if (nav) {
+          if (y > 24) {
+            nav.style.background = 'var(--glass-strong)';
+            nav.style.boxShadow = '0 18px 40px -32px rgba(0,0,0,.6)';
+          } else {
+            nav.style.background = 'var(--glass)';
+            nav.style.boxShadow = 'none';
+          }
+        }
+        ticking = false;
+      });
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    this._onScroll();
+  }
+
+  renderVals() {
+    return { toggleTheme: this.toggleTheme };
+  }
+}
+</script>
+</body>
+</html>

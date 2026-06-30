@@ -17,6 +17,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&family=Zen+Old+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
 <script src="image-slot.js"></script>
+<script src="scripts/today.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"GovernmentOrganization","name":"東軽井沢市","alternateName":"Higashi-Karuizawa City","slogan":"静けさを、未来へ。","description":"山に抱かれ、素材で世界とつながる山あいの研究都市。"}</script>
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
@@ -77,7 +78,7 @@
 
 <header data-nav="1" role="banner" style="color:var(--ink);position:fixed;top:0;left:0;right:0;z-index:120;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px clamp(18px,4vw,56px);background:var(--glass);backdrop-filter:blur(22px) saturate(1.4);-webkit-backdrop-filter:blur(22px) saturate(1.4);border-bottom:1px solid var(--line-2);transition:background .4s ease,box-shadow .4s ease">
   <a href="#top" aria-label="東軽井沢市 ホーム" style="display:flex;align-items:center;gap:10px">
-    <img src="img/logo.png" alt="" aria-hidden="true" width="30" height="29" style="width:30px;height:auto;display:block">
+    <img src="img/logo.png?v=2" alt="" aria-hidden="true" width="30" height="29" style="width:30px;height:auto;display:block">
     <span style="font-family:'Zen Old Mincho',serif;font-weight:600;font-size:19px;letter-spacing:.04em">東軽井沢市</span>
   </a>
   <nav aria-label="メインナビゲーション" style="display:flex;align-items:center;gap:clamp(14px,2vw,30px)">
@@ -122,8 +123,27 @@
   <div aria-hidden="true" style="position:absolute;left:0;right:0;top:24%;height:34%;background:linear-gradient(180deg,transparent,var(--mist) 45%,var(--mist) 60%,transparent);filter:blur(8px)"></div>
   <div aria-hidden="true" style="position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 18%,transparent 40%,rgba(0,0,0,.06) 100%)"></div>
 
+  <div data-today-card="1" aria-label="今日の東軽井沢" style="position:absolute;z-index:3;left:clamp(16px,4vw,56px);top:clamp(84px,11vh,124px);width:clamp(188px,19vw,260px);max-width:calc(100% - 32px);background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:0 22px 54px -46px rgba(27,30,26,.45);padding:clamp(15px,1.3vw,22px) clamp(16px,1.3vw,22px);text-align:left">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+      <span data-today-dot="1" aria-hidden="true" style="width:8px;height:8px;border-radius:50%;background:var(--accent);transition:background .6s ease"></span>
+      <span style="font-size:11px;letter-spacing:.16em;color:var(--muted)">今日の東軽井沢</span>
+      <span style="margin-left:auto;font-family:'Newsreader',serif;font-style:italic;font-size:11px;color:var(--muted)">Today</span>
+    </div>
+    <h2 id="hk-greeting" style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(20px,1.6vw,28px);line-height:1.05;letter-spacing:.01em;color:var(--ink)">Good Morning.</h2>
+    <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:5px 10px;margin-top:11px;color:var(--ink-2)">
+      <span style="font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)">現在</span>
+      <span id="hk-date" style="font-family:'Zen Old Mincho',serif;font-size:clamp(13px,1vw,15px)">2026年7月12日（土）</span>
+      <span aria-hidden="true" style="width:3px;height:3px;border-radius:50%;background:var(--line);align-self:center"></span>
+      <span id="hk-time" style="font-family:'Newsreader',serif;font-size:clamp(13px,1vw,15px)">7:12</span>
+      <span aria-hidden="true" style="width:3px;height:3px;border-radius:50%;background:var(--line);align-self:center"></span>
+      <span id="hk-temp" style="font-family:'Newsreader',serif;font-size:clamp(13px,1vw,15px)">22℃</span>
+    </div>
+    <p id="hk-message" style="margin-top:12px;font-size:clamp(12px,.9vw,14px);line-height:1.8;color:var(--ink);text-wrap:pretty">今日は川沿いのお散歩がおすすめです。</p>
+    <!-- 将来のパネル（ライブカメラ / ニュース / 天気 / 市報 など）はここに追加 -->
+  </div>
+
   <div style="position:relative;z-index:2;text-align:center;padding:0 24px;transform:translateY(-3vh)">
-    <img src="img/logo.png" alt="東軽井沢市 市章" width="118" height="115" data-reveal="1" style="width:clamp(88px,11vw,128px);height:auto;margin:0 auto 26px;display:block;filter:drop-shadow(0 6px 18px rgba(31,55,40,.18))">
+    <img src="img/logo.png?v=2" alt="東軽井沢市 市章" width="118" height="115" data-reveal="1" style="width:clamp(88px,11vw,128px);height:auto;margin:0 auto 26px;display:block;filter:drop-shadow(0 6px 18px rgba(31,55,40,.18))">
     <p style="font-size:13px;font-weight:500;letter-spacing:.4em;text-transform:uppercase;color:var(--ink-2);margin-bottom:30px">Higashi-Karuizawa City</p>
     <h1 style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:clamp(46px,9vw,128px);line-height:1.04;letter-spacing:.04em">東軽井沢市</h1>
     <p style="font-family:'Newsreader',serif;font-style:italic;font-weight:300;font-size:clamp(22px,3.4vw,42px);margin-top:22px;color:var(--ink)">Quiet, by design.</p>
@@ -154,11 +174,9 @@
   </div>
 
   <div data-reveal="1" data-reveal-delay="180" style="margin-top:clamp(48px,7vw,96px);position:relative;height:clamp(280px,46vw,560px);border-radius:6px;overflow:hidden;box-shadow:var(--shadow)">
-    <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(180deg,var(--sky-1),var(--sky-2) 55%,var(--sky-3))"></div>
-    <div aria-hidden="true" data-parallax="30" style="position:absolute;left:-6%;right:-6%;bottom:-12%;height:78%;background:var(--ridge-back);opacity:.8;clip-path:polygon(0 50%,18% 28%,36% 48%,52% 26%,70% 46%,86% 28%,100% 44%,100% 100%,0 100%)"></div>
-    <div aria-hidden="true" data-parallax="56" style="position:absolute;left:-6%;right:-6%;bottom:-12%;height:60%;background:var(--ridge-mid);clip-path:polygon(0 58%,20% 36%,40% 58%,58% 34%,76% 56%,90% 38%,100% 52%,100% 100%,0 100%)"></div>
-    <div aria-hidden="true" style="position:absolute;left:0;right:0;top:30%;height:30%;background:linear-gradient(180deg,transparent,var(--mist),transparent);filter:blur(6px)"></div>
-    <p style="position:absolute;left:24px;bottom:20px;font-family:'SFMono-Regular',ui-monospace,monospace;font-size:11px;letter-spacing:.08em;color:var(--ink-2);opacity:.7">［ 朝霧の見晴の丘から望む市街と三方の山並み ］</p>
+    <img src="img/thecity.jpg" alt="見晴の丘から市街と三方の山並みを望む家族" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+    <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(0,0,0,.4))"></div>
+    <p style="position:absolute;left:24px;bottom:20px;z-index:2;font-family:'SFMono-Regular',ui-monospace,monospace;font-size:11px;letter-spacing:.08em;color:rgba(255,255,255,.92);text-shadow:0 1px 6px rgba(0,0,0,.5)">［ 見晴の丘から望む市街と三方の山並み ］</p>
   </div>
 </section>
 
@@ -224,14 +242,14 @@
     </div>
     <div data-reveal="1" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(16px,1.8vw,24px);margin-top:clamp(20px,2.4vw,28px)">
       <div style="position:relative;height:clamp(240px,28vw,340px);border-radius:6px;overflow:hidden;display:flex;align-items:flex-end;box-shadow:var(--shadow)">
-        <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(135deg,#E9E0D1,#E6ECE4 60%,#D6E2DA)"></div>
-        <div aria-hidden="true" style="position:absolute;inset:0;background:radial-gradient(80% 60% at 30% 20%,rgba(255,244,224,.6),transparent 60%)"></div>
-        <p style="position:relative;z-index:2;padding:24px;font-family:'Zen Old Mincho',serif;font-size:clamp(22px,2.4vw,30px);color:#2a2c26">朝の風景</p>
+        <img src="img/asa.jpg?v=2" alt="朝霧に包まれる東軽井沢の市街と山並み" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+        <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.4))"></div>
+        <p style="position:relative;z-index:2;padding:24px;font-family:'Zen Old Mincho',serif;font-size:clamp(22px,2.4vw,30px);color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.5)">朝の風景</p>
       </div>
       <div style="position:relative;height:clamp(240px,28vw,340px);border-radius:6px;overflow:hidden;display:flex;align-items:flex-end;box-shadow:var(--shadow)">
-        <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(150deg,#1C2430,#28332F 55%,#33433A)"></div>
-        <div aria-hidden="true" style="position:absolute;inset:0;background:radial-gradient(2px 2px at 22% 64%,rgba(255,214,150,.9),transparent),radial-gradient(2px 2px at 38% 72%,rgba(255,214,150,.85),transparent),radial-gradient(2px 2px at 60% 60%,rgba(255,224,170,.9),transparent),radial-gradient(2px 2px at 74% 70%,rgba(255,214,150,.8),transparent),radial-gradient(2px 2px at 50% 80%,rgba(255,224,170,.85),transparent)"></div>
-        <p style="position:relative;z-index:2;padding:24px;font-family:'Zen Old Mincho',serif;font-size:clamp(22px,2.4vw,30px);color:#f3efe6">夜の風景</p>
+        <img src="img/yoru.jpg?v=2" alt="夜、家々の灯りがともる東軽井沢の市街" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+        <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.45))"></div>
+        <p style="position:relative;z-index:2;padding:24px;font-family:'Zen Old Mincho',serif;font-size:clamp(22px,2.4vw,30px);color:#f3efe6;text-shadow:0 1px 8px rgba(0,0,0,.6)">夜の風景</p>
       </div>
     </div>
   </div>
@@ -251,6 +269,7 @@
       <p style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:clamp(21px,2.4vw,32px);line-height:1.6">「最先端の研究と、家族とすごす夕方が、同じ一日のなかにある。通勤は22分。仕事を終えたら、緑道を子どもと歩いて家に帰る。」</p>
       <p style="margin-top:26px;font-size:15px;font-weight:500">{{ interview.name }}</p>
       <p style="font-size:13px;color:var(--muted)">{{ interview.role }}</p>
+      <a href="work/interview-tono.html" style="display:inline-flex;align-items:center;gap:8px;margin-top:22px;font-size:14px;font-weight:500;color:var(--accent);transition:gap .25s" style-hover="gap:13px">インタビュー全文を読む<span aria-hidden="true">→</span></a>
     </div>
     <div style="position:relative;height:clamp(260px,30vw,400px);border-radius:6px;overflow:hidden">
       <img src="img/interview.jpg" alt="緑道を家族と散歩する半導体素材研究者の遠野さん" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%">
@@ -329,7 +348,7 @@
     </div>
     <div data-reveal="1">
       <sc-for list="{{ news }}" as="n" hint-placeholder-count="5">
-        <a href="#news" style="display:grid;grid-template-columns:120px 96px 1fr auto;gap:clamp(14px,2vw,32px);align-items:center;padding:clamp(20px,2.2vw,28px) 6px;border-top:1px solid var(--line);transition:padding-left .3s,background .3s" style-hover="padding-left:18px" data-newsrow="1">
+        <a href="{{ n.href }}" style="display:grid;grid-template-columns:120px 96px 1fr auto;gap:clamp(14px,2vw,32px);align-items:center;padding:clamp(20px,2.2vw,28px) 6px;border-top:1px solid var(--line);transition:padding-left .3s,background .3s" style-hover="padding-left:18px" data-newsrow="1">
           <span style="font-family:'Newsreader',serif;font-size:15px;color:var(--muted)">{{ n.date }}</span>
           <span style="justify-self:start;padding:5px 12px;border:1px solid var(--accent);border-radius:100px;font-size:11px;font-weight:500;letter-spacing:.08em;color:var(--accent)">{{ n.cat }}</span>
           <span style="font-size:clamp(15px,1.3vw,18px);font-weight:500;line-height:1.6">{{ n.title }}</span>
@@ -439,6 +458,7 @@ class Component extends DCLogic {
       this._setupReveal();
       this._setupScroll();
       this._setupIntro();
+      this._setupToday();
       window.addEventListener('resize', this._responsive, { passive: true });
     });
   }
@@ -481,6 +501,12 @@ class Component extends DCLogic {
     document.documentElement.setAttribute('data-theme', t);
     this.setState({ theme: t });
     try { localStorage.setItem('hk-theme', t); } catch (e) {}
+  };
+
+  _setupToday = (tries) => {
+    tries = tries || 0;
+    if (window.HKToday && window.HKToday.init) { window.HKToday.init(); return; }
+    if (tries < 50) setTimeout(() => this._setupToday(tries + 1), 100);
   };
 
   _setupReveal() {
@@ -539,6 +565,11 @@ class Component extends DCLogic {
     const overlay = document.querySelector('[data-intro]');
     if (!overlay || this._introInit) return;
     this._introInit = true;
+
+    // リンクから戻ってきたとき（同一セッション内の再訪）はムービーを流さない
+    try { if (sessionStorage.getItem('hk-intro-seen') === '1') { this._endIntro(true); return; } } catch (e) {}
+    try { sessionStorage.setItem('hk-intro-seen', '1'); } catch (e) {}
+
     const video = document.querySelector('[data-intro-video]');
     const skip = document.querySelector('[data-intro-skip]');
     const hero = document.querySelector('#top');
@@ -691,11 +722,11 @@ class Component extends DCLogic {
         { tag: 'EVENING', age: '41', name: '千石 律', role: '宿場通り 町家カフェ店主', alt: '夜、カフェのカウンターでコーヒーを淹れる千石さん', bg: "url('img/resident-evening.jpg') center 30%/cover no-repeat", quote: '日が落ちると、通りに和ろうそくの灯りがともる。この静けさのために、店を構えた。', delay: 160 }
       ],
       news: [
-        { date: '2026.04.01', cat: '市政', title: '「東軽井沢2045」長期ビジョンを策定 ― サステナブル研究都市へ' },
-        { date: '2026.03.18', cat: '交通', title: '配車サービス「とうかるライド」、里山部へ対応エリアを拡充' },
-        { date: '2026.03.02', cat: '福祉', title: '「東軽保育園 × 東軽シニア園」開園 ― 世代循環ケアの拠点に' },
-        { date: '2026.02.20', cat: '文化', title: '東軽井沢国際ガラス・ビエンナーレ、今秋の開催が決定' },
-        { date: '2026.02.06', cat: 'イベント', title: '「雪あかりと温泉まつり」開催 ― 温泉郷が灯りに包まれる二夜' }
+        { date: '2026.04.01', cat: '市政', href: 'news/toukaru-2045.html', title: '「東軽井沢2045」長期ビジョンを策定 ― サステナブル研究都市へ' },
+        { date: '2026.03.18', cat: '交通', href: 'news/toukaru-ride.html', title: '配車サービス「とうかるライド」、里山部へ対応エリアを拡充' },
+        { date: '2026.03.02', cat: '福祉', href: 'news/sedai-junkan-care.html', title: '「東軽保育園 × 東軽シニア園」開園 ― 世代循環ケアの拠点に' },
+        { date: '2026.02.20', cat: '文化', href: 'news/glass-biennale.html', title: '東軽井沢国際ガラス・ビエンナーレ、今秋の開催が決定' },
+        { date: '2026.02.06', cat: 'イベント', href: 'news/yukiakari-onsen.html', title: '「雪あかりと温泉まつり」開催 ― 温泉郷が灯りに包まれる二夜' }
       ],
       events: [
         { m: '03', name: '宿場ひな巡り', desc: '町家に雛飾りが並ぶ、春のはじまり。' },

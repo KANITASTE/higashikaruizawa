@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="../support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="東軽井沢市お知らせ ─ 2年に一度、素材をテーマに国内外の作家が集う「東軽井沢国際ガラス・ビエンナーレ」の今秋開催が決定しました。">
+<meta property="og:title" content="東軽井沢国際ガラス・ビエンナーレ、今秋の開催が決定｜東軽井沢市">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&family=Zen+Old+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  :root{
+    --bg:#F3F1EB; --bg-2:#ECE9E1; --surface:#FBFAF6;
+    --ink:#1B1E1A; --ink-2:#4A4E45; --muted:#7C8076;
+    --line:rgba(27,30,26,.12); --line-2:rgba(27,30,26,.07);
+    --green:#3E5C49; --green-soft:#5C7A66;
+    --accent:#3E5C49;
+    --glass:rgba(243,241,235,.72); --glass-strong:rgba(243,241,235,.9); --glass-line:rgba(255,255,255,.55);
+    --card:rgba(251,250,246,.7);
+    --shadow:0 30px 70px -45px rgba(27,30,26,.5);
+  }
+  [data-theme="dark"]{
+    --bg:#101309; --bg-2:#14180F; --surface:#181C12;
+    --ink:#ECEAE0; --ink-2:#BFC2B6; --muted:#878B7E;
+    --line:rgba(236,234,224,.14); --line-2:rgba(236,234,224,.07);
+    --green:#9CC4A8; --green-soft:#7FA98B;
+    --accent:#9CC4A8;
+    --glass:rgba(16,19,9,.66); --glass-strong:rgba(16,19,9,.88); --glass-line:rgba(255,255,255,.07);
+    --card:rgba(24,28,18,.6);
+    --shadow:0 30px 80px -45px rgba(0,0,0,.85);
+  }
+  body{background:var(--bg);color:var(--ink);font-family:"Zen Kaku Gothic New",sans-serif;font-weight:400;line-height:1.85;-webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background .6s ease,color .6s ease}
+  a{color:inherit;text-decoration:none}
+  button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+  ::selection{background:var(--accent);color:var(--bg)}
+  img{max-width:100%;display:block}
+  ::-webkit-scrollbar{width:10px;height:10px}
+  ::-webkit-scrollbar-thumb{background:var(--line);border-radius:10px}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</helmet>
+
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#3E5C49"/><text x="50" y="60" font-family="serif" font-size="40" fill="#F3F1EB" text-anchor="middle">東</text></svg></template>
+<a href="#article" style="position:absolute;left:-9999px;top:0;z-index:200;padding:12px 18px;background:var(--accent);color:var(--bg);border-radius:0 0 10px 0" style-focus="left:0">本文へスキップ</a>
+
+<header data-nav="1" role="banner" style="color:var(--ink);position:fixed;top:0;left:0;right:0;z-index:120;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px clamp(18px,4vw,56px);background:var(--glass);backdrop-filter:blur(22px) saturate(1.4);-webkit-backdrop-filter:blur(22px) saturate(1.4);border-bottom:1px solid var(--line-2);transition:background .4s ease,box-shadow .4s ease">
+  <a href="../index.html" aria-label="東軽井沢市 ホームへ戻る" style="display:flex;align-items:center;gap:10px">
+    <img src="../img/logo.png?v=2" alt="" aria-hidden="true" width="30" height="29" style="width:30px;height:auto;display:block">
+    <span style="font-family:'Zen Old Mincho',serif;font-weight:600;font-size:19px;letter-spacing:.04em">東軽井沢市</span>
+  </a>
+  <nav aria-label="ナビゲーション" style="display:flex;align-items:center;gap:clamp(14px,2vw,28px)">
+    <a href="../index.html#news" style="display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:500;letter-spacing:.04em;color:var(--ink-2);transition:color .25s" style-hover="color:var(--accent)"><span aria-hidden="true">←</span>お知らせ一覧</a>
+    <button onClick="{{ toggleTheme }}" aria-label="テーマ切り替え（ライト／ダーク）" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);transition:border-color .25s,transform .25s" style-hover="border-color:var(--accent);transform:rotate(180deg)">
+      <span aria-hidden="true" style="width:17px;height:17px;border-radius:50%;border:1.5px solid var(--ink);background:linear-gradient(90deg,var(--ink) 0 50%,transparent 50% 100%)"></span>
+    </button>
+  </nav>
+</header>
+
+<main id="main" role="main" style="color:var(--ink)">
+<article id="article" data-screen-label="お知らせ記事">
+
+  <div style="max-width:820px;margin:0 auto;padding:clamp(116px,16vw,176px) clamp(22px,6vw,40px) clamp(36px,5vw,56px)">
+    <div data-reveal="1" style="display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;margin-bottom:30px">
+      <span style="padding:5px 13px;border:1px solid var(--accent);border-radius:100px;font-size:11px;font-weight:500;letter-spacing:.1em;color:var(--accent)">文化</span>
+      <span style="font-family:'Newsreader',serif;font-size:15px;color:var(--muted)">2026年2月20日（金）</span>
+    </div>
+    <h1 data-reveal="1" data-reveal-delay="60" style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:clamp(30px,5.2vw,60px);line-height:1.42;letter-spacing:.01em">東軽井沢国際ガラス・ビエンナーレ、<br>今秋の開催が決定</h1>
+    <p data-reveal="1" data-reveal-delay="120" style="margin-top:28px;font-size:clamp(16px,1.4vw,19px);line-height:2.05;color:var(--ink-2)">2年に一度、「素材」をテーマに国内外の作家が集う芸術祭「東軽井沢国際ガラス・ビエンナーレ」。その今秋の開催が決定しました。会場は石とガラスの建築・東軽井沢市立美術館を中心に、宿場通りのギャラリーやまちなかの工房へと広がります。</p>
+    <p data-reveal="1" data-reveal-delay="160" style="margin-top:26px;font-size:13px;letter-spacing:.04em;color:var(--muted)">東軽井沢市役所　教育委員会・産業振興部</p>
+  </div>
+
+  <figure data-reveal="1" style="margin:0 auto;max-width:1200px;padding:0 clamp(0px,3vw,40px)">
+    <div style="position:relative;height:clamp(280px,52vw,620px);overflow:hidden;border-radius:clamp(0px,1vw,8px);box-shadow:var(--shadow)">
+      <img src="../img/biennale.jpg" alt="東軽井沢市立美術館に並ぶ、色とりどりのガラス作品" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 50%">
+    </div>
+    <figcaption style="max-width:820px;margin:14px auto 0;padding:0 clamp(22px,6vw,40px);font-size:13px;color:var(--muted);line-height:1.7">前回のビエンナーレ会場。素材としてのガラスが、作家の手で多彩なかたちへと変わる。</figcaption>
+  </figure>
+
+  <div style="max-width:720px;margin:0 auto;padding:clamp(46px,7vw,84px) clamp(22px,6vw,40px) clamp(40px,5vw,60px)">
+
+    <p data-reveal="1" style="font-size:clamp(16px,1.2vw,18px);line-height:2.15;color:var(--ink);margin-bottom:1.9em">東軽井沢市は、隔年で開催する国際芸術祭「東軽井沢国際ガラス・ビエンナーレ」を、今秋11月に開催することを決定しました。素材・化学の街として知られるこの街には、ガラス・木工・金属の工芸が深く根づいています。「素材」を共通のテーマに掲げるこの芸術祭は、その土壌から生まれた、街ならではの催しです。</p>
+
+    <h2 data-reveal="1" style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:clamp(22px,2.4vw,30px);line-height:1.5;margin:1.6em 0 .9em">素材の街が育てた、ガラスの芸術祭</h2>
+    <p data-reveal="1" style="font-size:clamp(16px,1.2vw,18px);line-height:2.15;color:var(--ink);margin-bottom:1.9em">高機能ガラスや光学材料で世界とつながる地場産業の技術は、工芸の世界とも静かに響き合ってきました。ビエンナーレには国内外の作家が作品を寄せ、素材が芸術へと姿を変える瞬間が、会場いっぱいに並びます。中心会場は、石とガラスで構成された東軽井沢市立美術館。そこから宿場通りのギャラリー、まちなかの工房へと、街全体が展示空間になります。</p>
+
+    <blockquote data-reveal="1" style="margin:2.2em 0;padding:clamp(26px,3vw,40px) clamp(24px,3vw,40px);background:var(--card);backdrop-filter:blur(10px);border:1px solid var(--glass-line);border-left:3px solid var(--accent);border-radius:6px">
+      <p style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:clamp(19px,2vw,26px);line-height:1.85;color:var(--ink)">「ガラスは、素材が芸術になる瞬間を、いちばん正直に見せてくれる。この街にふさわしい一週間にしたい。」</p>
+      <p style="margin-top:18px;font-size:14px;color:var(--muted)">― 東軽井沢市立美術館 館長</p>
+    </blockquote>
+
+    <h2 data-reveal="1" style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:clamp(22px,2.4vw,30px);line-height:1.5;margin:1.6em 0 .9em">受賞作品展と、まちなか工房めぐり</h2>
+    <p data-reveal="1" style="font-size:clamp(16px,1.2vw,18px);line-height:2.15;color:var(--ink);margin-bottom:1.9em">会期中は、公募・招待による作品展示に加え、審査を経た受賞作品展を開催。あわせて、市内の工房を一斉に開放する「まちなか工房めぐり」と連動し、制作の現場を見学したり、ガラスや木工の制作を体験したりできます。つくる過程に触れられることが、この芸術祭のもうひとつの楽しみです。</p>
+
+    <div data-reveal="1" style="margin:2.4em 0;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--surface)">
+      <p style="padding:18px clamp(20px,2.4vw,28px);border-bottom:1px solid var(--line-2);font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)">開催概要</p>
+      <dl style="margin:0">
+        <div data-fact="1" style="display:grid;grid-template-columns:120px 1fr;gap:16px;padding:16px clamp(20px,2.4vw,28px);border-bottom:1px solid var(--line-2)"><dt style="font-size:14px;color:var(--muted)">名称</dt><dd style="font-size:15px;color:var(--ink)">東軽井沢国際ガラス・ビエンナーレ</dd></div>
+        <div data-fact="1" style="display:grid;grid-template-columns:120px 1fr;gap:16px;padding:16px clamp(20px,2.4vw,28px);border-bottom:1px solid var(--line-2)"><dt style="font-size:14px;color:var(--muted)">会期</dt><dd style="font-size:15px;color:var(--ink)">2026年11月（隔年開催）</dd></div>
+        <div data-fact="1" style="display:grid;grid-template-columns:120px 1fr;gap:16px;padding:16px clamp(20px,2.4vw,28px);border-bottom:1px solid var(--line-2)"><dt style="font-size:14px;color:var(--muted)">会場</dt><dd style="font-size:15px;color:var(--ink)">東軽井沢市立美術館 ほか、宿場通り・まちなか工房</dd></div>
+        <div data-fact="1" style="display:grid;grid-template-columns:120px 1fr;gap:16px;padding:16px clamp(20px,2.4vw,28px);border-bottom:1px solid var(--line-2)"><dt style="font-size:14px;color:var(--muted)">テーマ</dt><dd style="font-size:15px;color:var(--ink)">素材 ― Material</dd></div>
+        <div data-fact="1" style="display:grid;grid-template-columns:120px 1fr;gap:16px;padding:16px clamp(20px,2.4vw,28px)"><dt style="font-size:14px;color:var(--muted)">主催</dt><dd style="font-size:15px;color:var(--ink)">東軽井沢市・ビエンナーレ実行委員会</dd></div>
+      </dl>
+    </div>
+
+    <figure data-reveal="1" style="margin:2.4em 0 1.9em">
+      <div style="position:relative;height:clamp(220px,34vw,400px);overflow:hidden;border-radius:8px;box-shadow:var(--shadow)">
+        <img src="../img/biennale2.png" alt="受賞作品展に見入る来場者たち" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%">
+      </div>
+      <figcaption style="margin-top:14px;font-size:13px;color:var(--muted);line-height:1.7">受賞作品展に見入る来場者。素材を見つめる時間が、暮らしのなかに芸術を連れてくる。</figcaption>
+    </figure>
+
+    <p data-reveal="1" style="font-size:clamp(16px,1.2vw,18px);line-height:2.15;color:var(--ink)">「つくる文化」を大切にするこの街にとって、ビエンナーレは産業と芸術が出会う場でもあります。詳細な会期・出展者・チケット情報は、決まり次第あらためてお知らせします。秋の宿場通りを歩きながら、素材が芸術になる瞬間に、どうぞ立ち会ってください。</p>
+
+  </div>
+
+  <div style="max-width:720px;margin:0 auto;padding:0 clamp(22px,6vw,40px) clamp(70px,10vw,120px)">
+    <div data-reveal="1" style="padding-top:clamp(32px,4vw,48px);border-top:1px solid var(--line)">
+      <p style="font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:22px">関連するお知らせ</p>
+      <div style="display:flex;flex-direction:column">
+        <a href="yukiakari-onsen.html" style="display:grid;grid-template-columns:96px 1fr auto;gap:16px;align-items:center;padding:18px 4px;border-top:1px solid var(--line-2);transition:padding-left .3s" style-hover="padding-left:12px"><span style="font-family:'Newsreader',serif;font-size:14px;color:var(--muted)">2026.02.06</span><span style="font-size:15px;font-weight:500;line-height:1.6">「雪あかりと温泉まつり」開催 ― 温泉郷が灯りに包まれる二夜</span><span aria-hidden="true" style="color:var(--accent)">→</span></a>
+        <a href="sedai-junkan-care.html" style="display:grid;grid-template-columns:96px 1fr auto;gap:16px;align-items:center;padding:18px 4px;border-top:1px solid var(--line-2);transition:padding-left .3s" style-hover="padding-left:12px"><span style="font-family:'Newsreader',serif;font-size:14px;color:var(--muted)">2026.03.02</span><span style="font-size:15px;font-weight:500;line-height:1.6">「東軽保育園 × 東軽シニア園」開園 ― 世代循環ケアの拠点に</span><span aria-hidden="true" style="color:var(--accent)">→</span></a>
+        <div style="border-top:1px solid var(--line-2)"></div>
+      </div>
+      <a href="../index.html#news" style="display:inline-flex;align-items:center;gap:9px;margin-top:clamp(34px,4vw,48px);padding:13px 26px;border:1px solid var(--line);border-radius:100px;font-size:14px;font-weight:500;color:var(--ink);transition:border-color .25s,transform .25s" style-hover="border-color:var(--accent);transform:translateX(-3px)"><span aria-hidden="true">←</span>お知らせ一覧へ戻る</a>
+    </div>
+  </div>
+
+</article>
+</main>
+
+<footer role="contentinfo" style="color:var(--ink);background:var(--surface);border-top:1px solid var(--line);padding:clamp(48px,7vw,80px) clamp(22px,6vw,120px) clamp(36px,5vw,52px);transition:background .6s ease">
+  <div style="max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between">
+    <a href="../index.html" style="display:flex;align-items:center;gap:12px">
+      <img src="../img/logo.png?v=2" alt="" aria-hidden="true" width="26" height="25" style="width:26px;height:auto">
+      <span style="font-family:'Zen Old Mincho',serif;font-weight:600;font-size:17px">東軽井沢市</span>
+      <span style="font-family:'Newsreader',serif;font-style:italic;font-size:15px;color:var(--ink-2)">Quiet, by design.</span>
+    </a>
+    <p style="font-size:12px;color:var(--muted)">© 2026 東軽井沢市役所 都市戦略部 都市ブランド室</p>
+  </div>
+  <p style="max-width:1100px;margin:18px auto 0;font-size:12px;color:var(--muted)">本サイトに登場する企業・人物・施設はすべて架空のものです。</p>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  state = { theme: 'light' };
+
+  componentDidMount() {
+    const root = document.documentElement;
+    let theme = 'light';
+    try {
+      const saved = localStorage.getItem('hk-theme');
+      if (saved) theme = saved;
+      else theme = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+    } catch (e) {}
+    root.setAttribute('data-theme', theme);
+    this.setState({ theme });
+
+    this._reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    requestAnimationFrame(() => {
+      this._setupReveal();
+      this._setupScroll();
+      window.addEventListener('resize', this._responsive, { passive: true });
+      this._responsive();
+    });
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this._responsive);
+    window.removeEventListener('scroll', this._onScroll);
+  }
+
+  _responsive = () => {
+    const narrow = window.innerWidth < 560;
+    document.querySelectorAll('[data-fact]').forEach(el => {
+      el.style.gridTemplateColumns = narrow ? '1fr' : '120px 1fr';
+      el.style.gap = narrow ? '4px' : '16px';
+    });
+  };
+
+  toggleTheme = () => {
+    const t = this.state.theme === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', t);
+    this.setState({ theme: t });
+    try { localStorage.setItem('hk-theme', t); } catch (e) {}
+  };
+
+  _setupReveal() {
+    const els = Array.from(document.querySelectorAll('[data-reveal]'));
+    if (this._reduced || !('IntersectionObserver' in window)) {
+      els.forEach(e => { e.style.opacity = '1'; e.style.transform = 'none'; });
+      return;
+    }
+    els.forEach(e => {
+      const d = e.getAttribute('data-reveal-delay') || 0;
+      e.style.opacity = '0';
+      e.style.transform = 'translateY(24px)';
+      e.style.willChange = 'opacity, transform';
+      e.style.transition = 'opacity .9s cubic-bezier(.16,.84,.34,1) ' + d + 'ms, transform .9s cubic-bezier(.16,.84,.34,1) ' + d + 'ms';
+    });
+    const io = new IntersectionObserver((ents) => {
+      ents.forEach(en => {
+        if (en.isIntersecting) {
+          en.target.style.opacity = '1';
+          en.target.style.transform = 'none';
+          io.unobserve(en.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    els.forEach(e => io.observe(e));
+  }
+
+  _setupScroll() {
+    const nav = document.querySelector('[data-nav]');
+    let ticking = false;
+    this._onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const y = window.scrollY || window.pageYOffset;
+        if (nav) {
+          if (y > 24) {
+            nav.style.background = 'var(--glass-strong)';
+            nav.style.boxShadow = '0 18px 40px -32px rgba(0,0,0,.6)';
+          } else {
+            nav.style.background = 'var(--glass)';
+            nav.style.boxShadow = 'none';
+          }
+        }
+        ticking = false;
+      });
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    this._onScroll();
+  }
+
+  renderVals() {
+    return { toggleTheme: this.toggleTheme };
+  }
+}
+</script>
+</body>
+</html>

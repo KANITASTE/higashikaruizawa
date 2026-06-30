@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="../support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="東軽井沢市お知らせ ─ 規模の拡大ではなく質の深化を。人口減少と高齢化を前提に、暮らしの豊かさと景観・自然・産業を次世代へ手渡す20年計画「東軽井沢2045」を策定しました。">
+<meta property="og:title" content="「東軽井沢2045」長期ビジョンを策定 ― サステナブル研究都市へ｜東軽井沢市">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&family=Zen+Old+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  :root{
+    --bg:#F3F1EB; --bg-2:#ECE9E1; --surface:#FBFAF6;
+    --ink:#1B1E1A; --ink-2:#4A4E45; --muted:#7C8076;
+    --line:rgba(27,30,26,.12); --line-2:rgba(27,30,26,.07);
+    --green:#3E5C49; --green-soft:#5C7A66;
+    --accent:#3E5C49;
+    --glass:rgba(243,241,235,.72); --glass-strong:rgba(243,241,235,.9); --glass-line:rgba(255,255,255,.55);
+    --card:rgba(251,250,246,.7);
+    --shadow:0 30px 70px -45px rgba(27,30,26,.5);
+  }
+  [data-theme="dark"]{
+    --bg:#101309; --bg-2:#14180F; --surface:#181C12;
+    --ink:#ECEAE0; --ink-2:#BFC2B6; --muted:#878B7E;
+    --line:rgba(236,234,224,.14); --line-2:rgba(236,234,224,.07);
+    --green:#9CC4A8; --green-soft:#7FA98B;
+    --accent:#9CC4A8;
+    --glass:rgba(16,19,9,.66); --glass-strong:rgba(16,19,9,.88); --glass-line:rgba(255,255,255,.07);
+    --card:rgba(24,28,18,.6);
+    --shadow:0 30px 80px -45px rgba(0,0,0,.85);
+  }
+  body{background:var(--bg);color:var(--ink);font-family:"Zen Kaku Gothic New",sans-serif;font-weight:400;line-height:1.85;-webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background .6s ease,color .6s ease}
+  a{color:inherit;text-decoration:none}
+  button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+  ::selection{background:var(--accent);color:var(--bg)}
+  img{max-width:100%;display:block}
+  ::-webkit-scrollbar{width:10px;height:10px}
+  ::-webkit-scrollbar-thumb{background:var(--line);border-radius:10px}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</helmet>
+
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#3E5C49"/><text x="50" y="60" font-family="serif" font-size="40" fill="#F3F1EB" text-anchor="middle">東</text></svg></template>
+<a href="#article" style="position:absolute;left:-9999px;top:0;z-index:200;padding:12px 18px;background:var(--accent);color:var(--bg);border-radius:0 0 10px 0" style-focus="left:0">本文へスキップ</a>
+
+<header data-nav="1" role="banner" style="color:var(--ink);position:fixed;top:0;left:0;right:0;z-index:120;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px clamp(18px,4vw,56px);background:var(--glass);backdrop-filter:blur(22px) saturate(1.4);-webkit-backdrop-filter:blur(22px) saturate(1.4);border-bottom:1px solid var(--line-2);transition:background .4s ease,box-shadow .4s ease">
+  <a href="../index.html" aria-label="東軽井沢市 ホームへ戻る" style="display:flex;align-items:center;gap:10px">
+    <img src="../img/logo.png?v=2" alt="" aria-hidden="true" width="30" height="29" style="width:30px;height:auto;display:block">
+    <span style="font-family:'Zen Old Mincho',serif;font-weight:600;font-size:19px;letter-spacing:.04em">東軽井沢市</span>
+  </a>
+  <nav aria-label="ナビゲーション" style="display:flex;align-items:center;gap:clamp(14px,2vw,28px)">
+    <a href="../index.html#news" style="display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:500;letter-spacing:.04em;color:var(--ink-2);transition:color .25s" style-hover="color:var(--accent)"><span aria-hidden="true">←</span>お知らせ一覧</a>
+    <button onClick="{{ toggleTheme }}" aria-label="テーマ切り替え（ライト／ダーク）" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);transition:border-color .25s,transform .25s" style-hover="border-color:var(--accent);transform:rotate(180deg)">
+      <span aria-hidden="true" style="width:17px;height:17px;border-radius:50%;border:1.5px solid var(--ink);background:linear-gradient(90deg,var(--ink) 0 50%,transparent 50% 100%)"></span>
+    </button>
+  </nav>
+</header>
+
+<main id="main" role="main" style="color:var(--ink)">
+<article id="article" data-screen-label="お知らせ記事">
+
+  <div style="max-width:820px;margin:0 auto;padding:clamp(116px,16vw,176px) clamp(22px,6vw,40px) clamp(36px,5vw,56px)">
+    <div data-reveal="1" style="display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;margin-bottom:30px">
+      <span style="padding:5px 13px;border:1px solid var(--accent);border-radius:100px;font-size:11px;font-weight:500;letter-spacing:.1em;color:var(--accent)">市政</span>
+      <span style="font-family:'Newsreader',serif;font-size:15px;color:var(--muted)">2026年4月1日（水）</span>
+    </div>
+    <h1 data-reveal="1" data-reveal-delay="60" style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:clamp(30px,5.2vw,60px);line-height:1.42;letter-spacing:.01em">「東軽井沢2045」長期ビジョンを策定<br>― サステナブル研究都市へ</h1>
+    <p data-reveal="1" data-reveal-delay="120" style="margin-top:28px;font-size:clamp(16px,1.4vw,19px);line-height:2.05;color:var(--ink-2)">規模の拡大ではなく、質の深化を。人口減少と高齢化を前提として受け止めたうえで、いまある暮らしの豊かさと、景観・自然・産業の強みを次の世代へ確実に手渡す ── 東軽井沢市は、これからの20年を描く長期構想「東軽井沢2045」を策定しました。</p>
+    <p data-reveal="1" data-reveal-delay="160" style="margin-top:26px;font-size:13px;letter-spacing:.04em;color:var(--muted)">東軽井沢市役所　都市戦略部（総合計画）</p>
+  </div>
+
+  <div style="max-width:820px;margin:0 auto;padding:clamp(20px,3vw,40px) clamp(22px,6vw,40px) clamp(10px,2vw,24px)">
+
+    <p data-reveal="1" style="font-size:clamp(16px,1.2vw,18px);line-height:2.15;color:var(--ink);margin-bottom:1.9em">「いちばん速い街でも、いちばん大きい街でもない。けれど、いちばん『住み続けたい』と思える街でありたい」。東軽井沢市の長期構想「東軽井沢2045」は、この一文を軸に据えています。人口5万人規模を前提に、暮らしの質を深め続けることを目標とした、20年の計画です。</p>
+
+    <h2 data-reveal="1" style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:clamp(22px,2.4vw,30px);line-height:1.5;margin:1.6em 0 .9em">成長を追わない、成熟という選択</h2>
+    <p data-reveal="1" style="font-size:clamp(16px,1.2vw,18px);line-height:2.15;color:var(--ink);margin-bottom:1.9em">明治期の製糸業で活況を見せたのち、戦後の不況で人口を減らし、素材・化学産業の集積でいったん持ち直す ── 東軽井沢の人口は、産業の歴史とともに揺れてきました。市はいま、規模を競うのではなく、3人に1人が高齢者という構成のなかで「保育と介護のモデル都市」として暮らしの質を高める道を選んでいます。手厚い子育て支援により、若い世帯の流出には歯止めがかかりつつあります。</p>
+
+    <!-- グラフ1：人口推移 -->
+    <figure data-reveal="1" style="margin:2em 0;border:1px solid var(--line);border-radius:10px;background:var(--surface);padding:clamp(22px,3vw,34px) clamp(18px,3vw,32px) clamp(18px,2.4vw,26px)">
+      <figcaption style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:18px">
+        <span style="font-family:'Zen Old Mincho',serif;font-size:clamp(17px,1.8vw,21px);color:var(--ink)">人口推移（1950 → 2045）</span>
+        <span style="font-size:12px;color:var(--muted)">単位：人　／　2045年は推計値</span>
+      </figcaption>
+      <svg viewBox="0 0 800 344" width="100%" style="height:auto;display:block;overflow:visible" role="img" aria-label="1950年の約62,000人から1975年に約71,000人でピークを迎え、以降ゆるやかに減少し2026年は54,800人、2045年は約50,000人と推計される人口推移のグラフ">
+        <!-- 横グリッド + Y軸ラベル -->
+        <g stroke="var(--line-2)" stroke-width="1">
+          <line x1="60" y1="52.5" x2="760" y2="52.5"></line>
+          <line x1="60" y1="165" x2="760" y2="165"></line>
+          <line x1="60" y1="277.5" x2="760" y2="277.5"></line>
+        </g>
+        <line x1="60" y1="300" x2="760" y2="300" stroke="var(--line)" stroke-width="1.5"></line>
+        <g fill="var(--muted)" font-size="12" font-family="'Newsreader',serif" text-anchor="end">
+          <text x="52" y="56">70,000</text>
+          <text x="52" y="169">60,000</text>
+          <text x="52" y="281">50,000</text>
+        </g>
+        <!-- 面 -->
+        <polygon points="60,300 60,142.5 244,41 392,75 502,154 620,223 620,300" fill="var(--accent)" opacity="0.10"></polygon>
+        <!-- 実績ライン -->
+        <polyline points="60,142.5 244,41 392,75 502,154 620,223" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"></polyline>
+        <!-- 推計ライン（破線） -->
+        <polyline points="620,223 760,277.5" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-dasharray="6 6" stroke-linecap="round"></polyline>
+        <!-- ポイント -->
+        <g fill="var(--surface)" stroke="var(--accent)" stroke-width="2.5">
+          <circle cx="244" cy="41" r="4.5"></circle>
+          <circle cx="620" cy="223" r="4.5"></circle>
+        </g>
+        <circle cx="760" cy="277.5" r="4.5" fill="var(--accent)" stroke="var(--surface)" stroke-width="1.5"></circle>
+        <!-- 値ラベル -->
+        <g font-family="'Newsreader',serif" fill="var(--ink)">
+          <text x="244" y="30" font-size="14" text-anchor="middle">71,000</text>
+          <text x="620" y="211" font-size="14" text-anchor="middle">54,800</text>
+          <text x="760" y="270" font-size="13" text-anchor="end" fill="var(--muted)">50,000（推計）</text>
+        </g>
+        <!-- X軸（年） -->
+        <g fill="var(--muted)" font-size="12" font-family="'Newsreader',serif" text-anchor="middle">
+          <text x="60" y="322">1950</text>
+          <text x="244" y="322">1975</text>
+          <text x="392" y="322">1995</text>
+          <text x="502" y="322">2010</text>
+          <text x="620" y="322">2026</text>
+          <text x="760" y="322">2045</text>
+        </g>
+        <!-- 凡例 -->
+        <g font-size="12" font-family="'Zen Kaku Gothic New',sans-serif" fill="var(--ink-2)">
+          <line x1="560" y1="22" x2="586" y2="22" stroke="var(--accent)" stroke-width="2.5"></line>
+          <text x="592" y="26">実績</text>
+          <line x1="646" y1="22" x2="672" y2="22" stroke="var(--accent)" stroke-width="2.5" stroke-dasharray="6 6"></line>
+          <text x="678" y="26">推計</text>
+        </g>
+      </svg>
+      <p style="margin-top:14px;font-size:13px;color:var(--muted);line-height:1.7">1975年のピーク以降、全国の地方都市と同様にゆるやかな減少が続く。「東軽井沢2045」は、この現実を前提に、定住率の高さで下支えする道を描く。</p>
+    </figure>
+
+    <blockquote data-reveal="1" style="margin:2.2em 0;padding:clamp(26px,3vw,40px) clamp(24px,3vw,40px);background:var(--card);backdrop-filter:blur(10px);border:1px solid var(--glass-line);border-left:3px solid var(--accent);border-radius:6px">
+      <p style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:clamp(19px,2vw,26px);line-height:1.85;color:var(--ink)">「静けさを未来へ手渡すこと。それが、規模の数字よりも大切な、この街の約束です。」</p>
+      <p style="margin-top:18px;font-size:14px;color:var(--muted)">― 結城 怜 市長</p>
+    </blockquote>
+
+    <h2 data-reveal="1" style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:clamp(22px,2.4vw,30px);line-height:1.5;margin:1.6em 0 .9em">ビジョンを支える、4つの柱</h2>
+    <p data-reveal="1" style="font-size:clamp(16px,1.2vw,18px);line-height:2.15;color:var(--ink);margin-bottom:1.6em">「東軽井沢2045」は、2045年の目標像を4つの柱で描きます。脱炭素、素材研究、暮らし、そして移動 ── いずれも、この街が積み重ねてきた強みの延長線上にあります。</p>
+    <div data-reveal="1" data-pillars="1" style="display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(12px,1.6vw,18px);margin-bottom:1.4em">
+      <div style="background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:clamp(20px,2.2vw,28px);display:flex;flex-direction:column;gap:10px;min-height:150px">
+        <p style="font-family:'Newsreader',serif;font-size:15px;color:var(--accent)">01</p>
+        <h3 style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:clamp(17px,1.6vw,21px)">カーボンニュートラル都市</h3>
+        <p style="font-size:13.5px;line-height:1.8;color:var(--ink-2)">再生可能エネルギーと域内エネルギーマネジメントで、市域の脱炭素を実現する。</p>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:clamp(20px,2.2vw,28px);display:flex;flex-direction:column;gap:10px;min-height:150px">
+        <p style="font-family:'Newsreader',serif;font-size:15px;color:var(--accent)">02</p>
+        <h3 style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:clamp(17px,1.6vw,21px)">世界の素材研究ハブ</h3>
+        <p style="font-size:13.5px;line-height:1.8;color:var(--ink-2)">次世代素材の研究で世界的拠点となり、研究者が集まり続ける街に。</p>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:clamp(20px,2.2vw,28px);display:flex;flex-direction:column;gap:10px;min-height:150px">
+        <p style="font-family:'Newsreader',serif;font-size:15px;color:var(--accent)">03</p>
+        <h3 style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:clamp(17px,1.6vw,21px)">全世代が安心して暮らせる街</h3>
+        <p style="font-size:13.5px;line-height:1.8;color:var(--ink-2)">子育て・教育・医療・福祉の最高水準を維持し、定住率をさらに高める。</p>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:clamp(20px,2.2vw,28px);display:flex;flex-direction:column;gap:10px;min-height:150px">
+        <p style="font-family:'Newsreader',serif;font-size:15px;color:var(--accent)">04</p>
+        <h3 style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:clamp(17px,1.6vw,21px)">歩いて暮らせる景観都市</h3>
+        <p style="font-size:13.5px;line-height:1.8;color:var(--ink-2)">配車サービスと緑道を組み合わせ、車に頼りつつも誰もが移動できる美しい街並みへ。</p>
+      </div>
+    </div>
+
+    <h2 data-reveal="1" style="font-family:'Zen Old Mincho',serif;font-weight:500;font-size:clamp(22px,2.4vw,30px);line-height:1.5;margin:1.8em 0 .9em">2045へのロードマップ</h2>
+    <p data-reveal="1" style="font-size:clamp(16px,1.2vw,18px);line-height:2.15;color:var(--ink);margin-bottom:1.6em">目標像へは、5年ごとの4つの段階で近づいていきます。配車サービスと再エネの拡充から始まり、エネルギーの域内自給、研究ハブの国際化を経て、2045年の完成形へ。</p>
+
+    <!-- グラフ2：ロードマップ・タイムライン -->
+    <figure data-reveal="1" style="margin:.4em 0 2em;border:1px solid var(--line);border-radius:10px;background:var(--surface);padding:clamp(22px,3vw,34px) clamp(18px,3vw,32px)">
+      <div data-roadmap="1" style="display:flex;gap:clamp(8px,1.2vw,14px)">
+        <div style="flex:4;display:flex;flex-direction:column;gap:12px;min-width:0">
+          <p style="font-family:'Newsreader',serif;font-size:clamp(15px,1.5vw,18px);color:var(--accent)">〜2030</p>
+          <div style="height:10px;border-radius:6px;background:#C7D3C9"></div>
+          <p style="font-size:13px;line-height:1.7;color:var(--ink-2)">配車サービスの車両・対応エリア拡充、再エネ比率の引き上げ、研究学園地区の拡充。</p>
+        </div>
+        <div style="flex:5;display:flex;flex-direction:column;gap:12px;min-width:0">
+          <p style="font-family:'Newsreader',serif;font-size:clamp(15px,1.5vw,18px);color:var(--accent)">〜2035</p>
+          <div style="height:10px;border-radius:6px;background:#9DB3A4"></div>
+          <p style="font-size:13px;line-height:1.7;color:var(--ink-2)">域内エネルギー自給の本格化、全クラスターへの「まちの居間」整備完了。</p>
+        </div>
+        <div style="flex:5;display:flex;flex-direction:column;gap:12px;min-width:0">
+          <p style="font-family:'Newsreader',serif;font-size:clamp(15px,1.5vw,18px);color:var(--accent)">〜2040</p>
+          <div style="height:10px;border-radius:6px;background:#6E8C78"></div>
+          <p style="font-size:13px;line-height:1.7;color:var(--ink-2)">次世代素材研究ハブの国際拠点化、高齢者ケアの完全地域包括化。</p>
+        </div>
+        <div style="flex:4;display:flex;flex-direction:column;gap:12px;min-width:0">
+          <p style="font-family:'Newsreader',serif;font-size:clamp(15px,1.5vw,18px);color:var(--accent)">〜2045</p>
+          <div style="height:10px;border-radius:6px;background:#3E5C49"></div>
+          <p style="font-size:13px;line-height:1.7;color:var(--ink-2)">市域カーボンニュートラル達成、景観都市としての完成形へ。</p>
+        </div>
+      </div>
+      <p style="margin-top:18px;font-size:13px;color:var(--muted);line-height:1.7">色が深まるほど、ビジョンの完成へと近づく。5年ごとの取り組みを積み上げ、2045年の目標像をめざす。</p>
+    </figure>
+
+    <p data-reveal="1" style="font-size:clamp(16px,1.2vw,18px);line-height:2.15;color:var(--ink)">急がず、比べず、けれど、つくることをやめない。「東軽井沢2045」は、静けさを保ったまま世界とつながり続けるための、20年の約束です。計画の全文と各分野の個別計画は、市役所窓口および市ポータルで順次公開します。</p>
+
+  </div>
+
+  <div style="max-width:720px;margin:0 auto;padding:clamp(30px,4vw,46px) clamp(22px,6vw,40px) clamp(70px,10vw,120px)">
+    <div data-reveal="1" style="padding-top:clamp(32px,4vw,48px);border-top:1px solid var(--line)">
+      <p style="font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:22px">関連するお知らせ</p>
+      <div style="display:flex;flex-direction:column">
+        <a href="sedai-junkan-care.html" style="display:grid;grid-template-columns:96px 1fr auto;gap:16px;align-items:center;padding:18px 4px;border-top:1px solid var(--line-2);transition:padding-left .3s" style-hover="padding-left:12px"><span style="font-family:'Newsreader',serif;font-size:14px;color:var(--muted)">2026.03.02</span><span style="font-size:15px;font-weight:500;line-height:1.6">「東軽保育園 × 東軽シニア園」開園 ― 世代循環ケアの拠点に</span><span aria-hidden="true" style="color:var(--accent)">→</span></a>
+        <a href="toukaru-ride.html" style="display:grid;grid-template-columns:96px 1fr auto;gap:16px;align-items:center;padding:18px 4px;border-top:1px solid var(--line-2);transition:padding-left .3s" style-hover="padding-left:12px"><span style="font-family:'Newsreader',serif;font-size:14px;color:var(--muted)">2026.03.18</span><span style="font-size:15px;font-weight:500;line-height:1.6">配車サービス「とうかるライド」、里山部へ対応エリアを拡充</span><span aria-hidden="true" style="color:var(--accent)">→</span></a>
+        <div style="border-top:1px solid var(--line-2)"></div>
+      </div>
+      <a href="../index.html#news" style="display:inline-flex;align-items:center;gap:9px;margin-top:clamp(34px,4vw,48px);padding:13px 26px;border:1px solid var(--line);border-radius:100px;font-size:14px;font-weight:500;color:var(--ink);transition:border-color .25s,transform .25s" style-hover="border-color:var(--accent);transform:translateX(-3px)"><span aria-hidden="true">←</span>お知らせ一覧へ戻る</a>
+    </div>
+  </div>
+
+</article>
+</main>
+
+<footer role="contentinfo" style="color:var(--ink);background:var(--surface);border-top:1px solid var(--line);padding:clamp(48px,7vw,80px) clamp(22px,6vw,120px) clamp(36px,5vw,52px);transition:background .6s ease">
+  <div style="max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between">
+    <a href="../index.html" style="display:flex;align-items:center;gap:12px">
+      <img src="../img/logo.png?v=2" alt="" aria-hidden="true" width="26" height="25" style="width:26px;height:auto">
+      <span style="font-family:'Zen Old Mincho',serif;font-weight:600;font-size:17px">東軽井沢市</span>
+      <span style="font-family:'Newsreader',serif;font-style:italic;font-size:15px;color:var(--ink-2)">Quiet, by design.</span>
+    </a>
+    <p style="font-size:12px;color:var(--muted)">© 2026 東軽井沢市役所 都市戦略部 都市ブランド室</p>
+  </div>
+  <p style="max-width:1100px;margin:18px auto 0;font-size:12px;color:var(--muted)">本サイトに登場する企業・人物・施設はすべて架空のものです。</p>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  state = { theme: 'light' };
+
+  componentDidMount() {
+    const root = document.documentElement;
+    let theme = 'light';
+    try {
+      const saved = localStorage.getItem('hk-theme');
+      if (saved) theme = saved;
+      else theme = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+    } catch (e) {}
+    root.setAttribute('data-theme', theme);
+    this.setState({ theme });
+
+    this._reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    requestAnimationFrame(() => {
+      this._setupReveal();
+      this._setupScroll();
+      window.addEventListener('resize', this._responsive, { passive: true });
+      this._responsive();
+    });
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this._responsive);
+    window.removeEventListener('scroll', this._onScroll);
+  }
+
+  _responsive = () => {
+    const w = window.innerWidth;
+    document.querySelectorAll('[data-pillars]').forEach(el => {
+      el.style.gridTemplateColumns = w < 560 ? '1fr' : 'repeat(2,1fr)';
+    });
+    document.querySelectorAll('[data-roadmap]').forEach(el => {
+      el.style.flexDirection = w < 640 ? 'column' : 'row';
+    });
+  };
+
+  toggleTheme = () => {
+    const t = this.state.theme === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', t);
+    this.setState({ theme: t });
+    try { localStorage.setItem('hk-theme', t); } catch (e) {}
+  };
+
+  _setupReveal() {
+    const els = Array.from(document.querySelectorAll('[data-reveal]'));
+    if (this._reduced || !('IntersectionObserver' in window)) {
+      els.forEach(e => { e.style.opacity = '1'; e.style.transform = 'none'; });
+      return;
+    }
+    els.forEach(e => {
+      const d = e.getAttribute('data-reveal-delay') || 0;
+      e.style.opacity = '0';
+      e.style.transform = 'translateY(24px)';
+      e.style.willChange = 'opacity, transform';
+      e.style.transition = 'opacity .9s cubic-bezier(.16,.84,.34,1) ' + d + 'ms, transform .9s cubic-bezier(.16,.84,.34,1) ' + d + 'ms';
+    });
+    const io = new IntersectionObserver((ents) => {
+      ents.forEach(en => {
+        if (en.isIntersecting) {
+          en.target.style.opacity = '1';
+          en.target.style.transform = 'none';
+          io.unobserve(en.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    els.forEach(e => io.observe(e));
+  }
+
+  _setupScroll() {
+    const nav = document.querySelector('[data-nav]');
+    let ticking = false;
+    this._onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const y = window.scrollY || window.pageYOffset;
+        if (nav) {
+          if (y > 24) {
+            nav.style.background = 'var(--glass-strong)';
+            nav.style.boxShadow = '0 18px 40px -32px rgba(0,0,0,.6)';
+          } else {
+            nav.style.background = 'var(--glass)';
+            nav.style.boxShadow = 'none';
+          }
+        }
+        ticking = false;
+      });
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    this._onScroll();
+  }
+
+  renderVals() {
+    return { toggleTheme: this.toggleTheme };
+  }
+}
+</script>
+</body>
+</html>
