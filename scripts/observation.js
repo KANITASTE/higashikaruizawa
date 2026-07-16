@@ -72,29 +72,46 @@
 
     var current = "";
     var updateMin = randUpdate();
+    var loadToken = 0;
+
+    // 切替時にもたつかないよう、使用する画像を先にブラウザへ読み込ませる
+    for (var p = 0; p < schedule.length; p++) {
+      var preload = new Image();
+      preload.src = basePath + schedule[p].image;
+    }
 
     function renderUpdate() {
       if (updEl) updEl.textContent = "約" + updateMin + "分前更新";
     }
 
     // 0.5秒のゆるやかなフェードで画像を差し替える
+    // 読み込み成功後に current を更新することで、通信失敗時に固定されるのを防ぐ。
     function setImage(file) {
       if (file === current || !img) return;
       var url = basePath + file;
-      if (!current) {
-        current = file;
-        img.onload = function () { img.style.opacity = "1"; };
-        img.src = url;
-        return;
-      }
-      current = file;
-      img.style.opacity = "0";
-      setTimeout(function () {
-        img.onload = function () { img.style.opacity = "1"; };
-        img.src = url;
-        updateMin = randUpdate();
-        renderUpdate();
-      }, 500);
+      var token = ++loadToken;
+      var next = new Image();
+
+      next.onload = function () {
+        if (token !== loadToken) return;
+        img.style.opacity = current ? "0" : "1";
+        setTimeout(function () {
+          if (token !== loadToken) return;
+          img.src = url;
+          img.alt = "東軽井沢駅前の定点観測画像（" + file.replace(/\.png$/i, "") + "）";
+          current = file;
+          requestAnimationFrame(function () { img.style.opacity = "1"; });
+          updateMin = randUpdate();
+          renderUpdate();
+        }, current ? 500 : 0);
+      };
+
+      next.onerror = function () {
+        // 一時的な読み込み失敗でも次回 tick で再試行できるよう current は変更しない
+        if (window.console && console.warn) console.warn("Observation image failed:", url);
+        img.style.opacity = "1";
+      };
+      next.src = url;
     }
 
     function tick() {
@@ -106,7 +123,15 @@
 
     renderUpdate();
     tick();
-    setInterval(tick, 1000);
+    var timer = setInterval(tick, 1000);
+
+    // スマホのスリープ復帰や別タブから戻った直後にも、現在時刻へ確実に追従
+    document.addEventListener("visibilitychange", function () {
+      if (!document.hidden) tick();
+    });
+    window.addEventListener("pageshow", tick);
+
+    root._obsDestroy = function () { clearInterval(timer); };
   }
 
   function initAll() {
